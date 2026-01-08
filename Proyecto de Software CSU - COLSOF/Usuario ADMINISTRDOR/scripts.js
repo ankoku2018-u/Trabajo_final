@@ -27,7 +27,26 @@
     const modal = qs('#mdlConstruccion') || qs('#modal-construccion');
     const cerrar = qs('#btnCerrarModal') || qs('#cerrar-modal');
     if (!modal) return;
-    qsa('.open-modal').forEach(a => a.addEventListener('click', (e) => { e.preventDefault(); modal.classList.add('active'); modal.style.display = 'flex'; }));
+    
+    qsa('.open-modal').forEach(a => {
+      const text = (a.textContent || '').toLowerCase();
+      let href = '';
+
+      // Asignar rutas a archivos existentes en el proyecto
+      if (text.includes('reportes')) href = '../../Menu - Reportes.html';
+      else if (text.includes('estadísticas') || text.includes('estadisticas')) href = '../Usuario GESTOR/Menu - Estadisticas.html';
+      else if (text.includes('notificaciones')) href = '../Usuario GESTOR/Menu - Notificaciones.html';
+      else if (text.includes('herramientas')) href = '../Usuario GESTOR/Menu - Herramientas.html';
+      else if (text.includes('configuración') || text.includes('configuracion')) href = '../Usuario GESTOR/Menu - Configuracion.html';
+
+      if (href) {
+        a.href = href;
+        a.classList.remove('open-modal');
+      } else {
+        a.addEventListener('click', (e) => { e.preventDefault(); modal.classList.add('active'); modal.style.display = 'flex'; });
+      }
+    });
+
     if (cerrar) cerrar.addEventListener('click', () => { modal.classList.remove('active'); modal.style.display = 'none'; });
     modal.addEventListener('click', (e) => { if (e.target === modal) { modal.classList.remove('active'); modal.style.display = 'none'; } });
   })();

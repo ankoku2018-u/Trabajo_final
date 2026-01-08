@@ -25,7 +25,7 @@
 
             <ul class="menu-list">
                 <li class="menu-item">
-                    <a href="#">
+                    <a href="Menu principal Admin.html">
                         <!-- home icon -->
                         <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                             <path d="M3 10.5L12 3l9 7.5V21a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V10.5z" stroke="#0b3a66" stroke-width="1.5" fill="#e8f0fb"/>
@@ -35,7 +35,7 @@
                 </li>
 
                 <li class="menu-item">
-                    <a href="#">
+                    <a href="#" class="open-modal">
                         <!-- statistics icon -->
                            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                             <rect x="3" y="13" width="6" height="8" rx="1.5" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.5"/>
@@ -48,7 +48,7 @@
                 </li>
 
                 <li class="menu-item">
-                    <a href="#">
+                    <a href="#" class="open-modal">
                         <!-- database icon -->
                         <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                             <ellipse cx="12" cy="6" rx="9" ry="4" fill="#fffde7" stroke="#fbc02d" stroke-width="1.5"/>
@@ -72,10 +72,10 @@
                         </summary>
 
                         <ul class="sub-list">
-                            <li><a href="#">Registrar</a></li>
-                            <li><a href="#">Lista</a></li>
-                            <li><a href="#">Roles</a></li>
-                            <li><a href="#">Monitoreo</a></li>
+                            <li><a href="Creacion de usuarios.html">Registrar</a></li>
+                            <li><a href="#" class="open-modal">Lista</a></li>
+                            <li><a href="#" class="open-modal">Roles</a></li>
+                            <li><a href="#" class="open-modal">Monitoreo</a></li>
                         </ul>
                     </details>
                 </li>
@@ -95,14 +95,14 @@
                         </summary>
 
                         <ul class="sub-list">
-                            <li><a href="#">Mis Casos</a></li>
-                            <li><a href="#">Evidencias</a></li>
+                            <li><a href="#" class="open-modal">Mis Casos</a></li>
+                            <li><a href="#" class="open-modal">Evidencias</a></li>
                         </ul>
                     </details>
                 </li>
 
                 <li class="menu-item">
-                    <a href="#" class="notif">
+                    <a href="#" class="notif open-modal">
                         <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path d="M12 22a2 2 0 002-2H10a2 2 0 002 2z" stroke="#111" stroke-width="1.2" fill="none"/>
                             <path d="M18 16v-5a6 6 0 10-12 0v5l-2 2h16l-2-2z" stroke="#111" stroke-width="1.2" fill="none"/>
@@ -113,7 +113,7 @@
                 </li>
 
                 <li class="menu-item">
-                    <a href="#">
+                    <a href="#" class="open-modal">
                         <!-- settings/gear icon -->
                         <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                             <circle cx="12" cy="12" r="3" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.5"/>
@@ -213,84 +213,6 @@
         <button id="cerrar-modal-error" class="modal-btn">Cerrar</button>
     </div>
 </div>
-<script>
-// Mostrar modal en vez de alert
-function mostrarModal() {
-  document.getElementById('modal-construccion').style.display = 'flex';
-}
-document.getElementById('cerrar-modal').onclick = function() {
-  document.getElementById('modal-construccion').style.display = 'none';
-};
-// Opciones principales
-const mainMenuLinks = document.querySelectorAll('.menu-list > .menu-item > a:not(.notif)');
-mainMenuLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-        mostrarModal();
-    });
-});
-// Opciones de submenús
-const subMenuLinks = document.querySelectorAll('.sub-list a');
-subMenuLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-        mostrarModal();
-    });
-});
-// Generar contraseña segura
-function generarContrasena(longitud = 12) {
-    const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789!@#$%&*?';
-    let pass = '';
-    for (let i = 0; i < longitud; i++) {
-        pass += chars.charAt(Math.floor(Math.random() * chars.length));
-    }
-    return pass;
-}
-document.querySelector('.gen-pass-btn').addEventListener('click', function(e) {
-    e.preventDefault();
-    const pass = generarContrasena();
-    document.getElementById('contrasena').value = pass;
-});
-// Submenú de perfil
-const menuBtn = document.querySelector('.profile-menu-btn');
-const menu = document.querySelector('.profile-menu');
-menuBtn.addEventListener('click', function(e) {
-    e.stopPropagation();
-    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-});
-document.addEventListener('click', function(e) {
-    if (menu.style.display === 'block') menu.style.display = 'none';
-});
-document.querySelector('.logout-btn').addEventListener('click', function() {
-    alert('Sesión cerrada');
-});
-
-// Envío del formulario: validar, mostrar éxito o error y redirigir
-(function(){
-  const form = document.querySelector('.user-form');
-  const modalExito = document.getElementById('modal-exito');
-  const cerrarExito = document.getElementById('cerrar-modal-exito');
-  const modalError = document.getElementById('modal-error');
-  const cerrarError = document.getElementById('cerrar-modal-error');
-  const goToMenu = () => { window.location.href = 'Menu principal Admin.html'; };
-
-  cerrarError && (cerrarError.onclick = () => { modalError.style.display = 'none'; });
-
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    if (form.checkValidity()) {
-      // Mostrar modal de éxito y redirigir
-      modalExito.style.display = 'flex';
-      cerrarExito && (cerrarExito.onclick = goToMenu);
-      // Redirección automática tras breve espera
-      setTimeout(goToMenu, 1400);
-    } else {
-      // Forzar mensajes nativos del navegador y mostrar modal de error
-      form.reportValidity();
-      modalError.style.display = 'flex';
-    }
-  });
-})();
-</script>
+<script src="scripts.js" defer></script>
 </body>
 </html>
