@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.case-card .case-card-header {
+  background: transparent;
+  border-bottom: none;
+  padding: 0 0 12px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} 
+
+/* Header interno de la tarjeta */
+.case-card .case-card-header > div { display:flex; gap:12px; align-items:center; }
+.case-card .case-card-header p { margin: 0; color: #6b7280; }
+
+
+/* Badge para elementos dentro de .case-card si es necesario */
+.case-card .badge { display: inline-block; }
+
+
+.case-card .case-card-header .header-actions button {
+  padding: 8px 12px;
+  margin-left: 8px;
+  border-radius: 8px;
+  border: 1px solid #e6eefc;
+  background: #fff;
+  color: #15467b;
+  cursor: pointer;
+}
+
+.case-card .case-card-header .header-actions .secondary {
+  border-color: #d1d5db;
+  color: #374151;
+}
+
+
+/* Page container inside main-content uses global .main-content, no local .container override */
+.notifications-wrap { max-width: 1100px; margin: 0 auto; padding: 10px 0; }
+
+/* Preserve original semantics for very small pages */
+@media (max-width:700px){ .notifications-wrap { padding: 8px; } }
+
+
+.filters {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filters button {
+  padding: 8px 12px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-right: 5px;
+  border-radius: 8px;
+}
+
+.filters button.active {
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-weight: bold;
+}
+
+/* Nuevo: tarjeta que contiene la lista debe ocupar el espacio disponible */
+.notifications-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: calc(100vh - 220px); /* ajustable según header/top padding */
+  padding: 16px;
+}
+
+.notification-list {
+  overflow-y: auto;
+  flex: 1 1 auto;
+  padding-right: 6px;
+}
+
+.notification {
+  background: white;
+  border: 1px solid #eef2f6;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 6px 16px rgba(11,58,102,0.04);
+}
+
+.notification.unread { border-left: 4px solid #1d4ed8; }
+
+.actions { margin-top: 12px; }
+.actions button { margin-right: 8px; padding: 8px 12px; border-radius: 8px; }
+.actions .read { background: #dbeafe; border: none; }
+.actions .delete { background: #fee2e2; border: none; }
+
+/* Responsive tweak: reduce height on smaller screens */
+@media (max-width: 900px) {
+  .notifications-card { height: calc(100vh - 200px); }
+}
+
+@media (max-width: 520px) {
+  .notifications-card { height: auto; }
+}
+
+
+.case-card .notification {
+  background: #fff;
+  border: 1px solid #eef2f6;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 14px rgba(11,58,102,0.03);
+}
+
+.case-card .notification.unread {
+  border-left: 4px solid #1d4ed8;
+}
+
+.case-card .notification h3 { margin: 0 0 6px; color: #0b3a66; }
+.case-card .notification small { color:#6b7280; }
+
+.case-card .actions { margin-top: 10px; }
+.case-card .actions button { margin-right: 8px; padding: 6px 10px; border-radius: 8px; border: none; cursor: pointer; }
+.case-card .actions .read { background:#e0f2fe; color: #15467b; }
+.case-card .actions .delete { background:#fee2e2; color:#b91c1c; }
+
+
+/* Alinear contenido de notificaciones para ocupar todo el ancho del main */
+.notifications-content { margin: 0; padding: 18px 0; }
+.notifications-content .page-header { margin-bottom: 8px; }
+.notifications-content .filters { margin-bottom: 14px; }
+
+/* Evitar sobreescribir el .container global; usar .notifications-wrap para padding */
+.notifications-wrap { padding: 10px 0; }
+
