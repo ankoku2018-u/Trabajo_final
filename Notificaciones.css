@@ -18,26 +18,6 @@ body {
 .case-card .case-card-header > div { display:flex; gap:12px; align-items:center; }
 .case-card .case-card-header p { margin: 0; color: #6b7280; }
 
-.top-header .bell {
-  position: relative;
-  font-size: 20px;
-  color: #fff;
-  margin-right: 10px;
-}
-.top-header .bell .badge { top: -6px; right: -10px; }
-
-/* Badge en la campana del top-header */
-.top-header .bell .badge {
-  position: absolute;
-  top: -6px;
-  right: -10px;
-  background: #dc2626;
-  color: white;
-  border-radius: 50%;
-  padding: 3px 6px;
-  font-size: 12px;
-  display: none;
-}
 
 /* Badge para elementos dentro de .case-card si es necesario */
 .case-card .badge { display: inline-block; }

@@ -5,11 +5,31 @@
     box-sizing: border-box;
 }
 
+:root {
+    --bg: #f6f7fb;
+    --surface: #fff;
+    --brand-600: #15467b;
+    --brand-700: #0f3f86;
+    --muted: #7b8694;
+    --text: #111827;
+    --accent: #1976d2;
+    --danger: #dc2626;
+    --card-border: #ebedf2;
+    --radius: 10px;
+    --gap: 16px;
+    --shadow-sm: 0 2px 12px rgba(21,70,123,0.06);
+    --shadow-md: 0 6px 18px rgba(11,58,102,0.08);
+    --kpi-padding: 18px;
+    --icon-size: 20px;
+}
+
 body {
     font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-    background: #f6f7fb;
-    color: #222;
-}
+    background: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+} 
 
 /* Contenedor principal */
 .container {

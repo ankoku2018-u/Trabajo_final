@@ -19,8 +19,10 @@ function render() {
     ? `Tienes ${unreadCount} notificaciones sin leer`
     : 'No tienes notificaciones pendientes';
 
-  badge.style.display = unreadCount > 0 ? 'inline' : 'none';
-  badge.textContent = unreadCount;
+  if (badge) {
+    badge.style.display = unreadCount > 0 ? 'inline' : 'none';
+    badge.textContent = unreadCount;
+  }
 
   let filtered = filter === 'all'
     ? notifications
