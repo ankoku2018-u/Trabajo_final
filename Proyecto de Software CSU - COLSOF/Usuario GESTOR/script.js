@@ -50,6 +50,12 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
+    // Permitir navegación a Crear Usuario
+    if (a.textContent.includes('Crear Usuario')) {
+      a.href = '../Usuario ADMINISTRDOR/Creacion de usuarios.html';
+      return;
+    }
+
     a.addEventListener('click', (e) => {
       e.preventDefault();
       showModal('modal-construccion');
