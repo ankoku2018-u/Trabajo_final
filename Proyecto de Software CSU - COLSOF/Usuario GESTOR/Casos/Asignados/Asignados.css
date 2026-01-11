@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f3f4f6;
+}
+
+.header {
+  background: white;
+  padding: 20px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-left {
+  display: flex;
+  gap: 12px;
+}
+
+.icon {
+  font-size: 32px;
+}
+
+.total strong {
+  font-size: 28px;
+  color: #7c3aed;
+}
+
+.container {
+  max-width: 1600px;
+  margin: auto;
+  padding: 20px;
+}
+
+.technicians {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.tech {
+  background: white;
+  padding: 15px;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tech.active {
+  border-color: #7c3aed;
+  background: #f5f3ff;
+}
+
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.kpi {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.blue strong { color: #1d4ed8; }
+.yellow strong { color: #a16207; }
+.red strong { color: #b91c1c; }
+.purple strong { color: #7c3aed; }
+
+.search input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  margin-bottom: 15px;
+}
+
+.table-wrapper {
+  background: white;
+  border-radius: 10px;
+  overflow-x: auto;
+  border: 1px solid #e5e7eb;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.priority-Urgente { background:#fee2e2; color:#991b1b; }
+.priority-Alta { background:#ffedd5; color:#9a3412; }
+.priority-Media { background:#fef9c3; color:#854d0e; }
+.priority-Baja { background:#dcfce7; color:#166534; }
+
+.status-EnProgreso { background:#dbeafe; color:#1e40af; }
+.status-Pendiente { background:#fef9c3; color:#854d0e; }
+.status-Programado { background:#ede9fe; color:#5b21b6; }
+
+.actions button {
+  padding: 6px 8px;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden { display: none; }
+
+.modal-content {
+  background: white;
+  width: 900px;
+  max-width: 95%;
+  border-radius: 10px;
+}
+
+.modal-header {
+  padding: 15px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-actions {
+  padding: 15px;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  gap: 10px;
+}

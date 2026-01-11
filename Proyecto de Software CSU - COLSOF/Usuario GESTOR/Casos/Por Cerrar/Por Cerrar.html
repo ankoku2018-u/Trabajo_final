@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CSU - Casos por Cerrar</title>
+  <link rel="stylesheet" href="Por Cerrar.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-left">
+    <div class="icon">📋</div>
+    <div>
+      <h1>Casos por Cerrar</h1>
+      <p>Casos completados pendientes de validación administrativa</p>
+    </div>
+  </div>
+  <div class="pending">
+    <span>Pendientes</span>
+    <strong id="totalPending"></strong>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- Alerta -->
+  <div class="alert">
+    <strong>Atención:</strong> estos casos fueron completados por los técnicos y requieren tu aprobación para cierre definitivo.
+  </div>
+
+  <!-- KPIs -->
+  <section class="kpis">
+    <div class="kpi">
+      <span>Total por cerrar</span>
+      <strong id="kpiTotal"></strong>
+    </div>
+    <div class="kpi red">
+      <span>Urgentes (1 día)</span>
+      <strong id="kpiUrgent"></strong>
+    </div>
+    <div class="kpi orange">
+      <span>Próximos (2 días)</span>
+      <strong id="kpiSoon"></strong>
+    </div>
+    <div class="kpi yellow">
+      <span>Retrasados (+3)</span>
+      <strong id="kpiLate"></strong>
+    </div>
+  </section>
+
+  <!-- Lista -->
+  <section id="casesList"></section>
+
+</main>
+
+<!-- Modal -->
+<div id="modal" class="modal hidden">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 id="modalId"></h2>
+      <button onclick="closeModal()">✕</button>
+    </div>
+    <div id="modalBody"></div>
+    <div class="modal-actions">
+      <button class="reject" onclick="rejectCase()">Rechazar</button>
+      <button class="approve" onclick="approveCase()">Aprobar</button>
+    </div>
+  </div>
+</div>
+
+<script src="Por Cerrar.js"></script>
+</body>
+</html>

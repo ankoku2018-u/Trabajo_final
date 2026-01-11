@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CSU - Mis Casos</title>
+  <link rel="stylesheet" href="Mis Casos.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-left">
+    <div class="icon">📂</div>
+    <div>
+      <h1>Mis Casos</h1>
+      <p>Casos asignados a Juan Pérez</p>
+    </div>
+  </div>
+  <div class="workload">
+    <span>Carga de trabajo</span>
+    <strong id="activeCases"></strong>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- KPIs -->
+  <section class="kpis">
+    <div class="kpi">
+      <span>Total Asignados</span>
+      <strong id="totalCases"></strong>
+    </div>
+    <div class="kpi blue">
+      <span>En Progreso</span>
+      <strong id="inProgress"></strong>
+    </div>
+    <div class="kpi yellow">
+      <span>Pendientes</span>
+      <strong id="pending"></strong>
+    </div>
+    <div class="kpi green">
+      <span>Completados</span>
+      <strong id="completed"></strong>
+    </div>
+  </section>
+
+  <!-- Filtros -->
+  <section class="filters">
+    <input type="text" placeholder="Buscar en mis casos..." disabled>
+    <div class="filter-buttons">
+      <button onclick="setFilter('all')">Todos</button>
+      <button onclick="setFilter('En Progreso')">En Progreso</button>
+      <button onclick="setFilter('Pendiente')">Pendientes</button>
+    </div>
+  </section>
+
+  <!-- Casos -->
+  <section id="casesList"></section>
+
+</main>
+
+<!-- Modal -->
+<div id="modal" class="modal hidden">
+  <div class="modal-content">
+    <div class="modal-header">
+      <div>
+        <h2 id="modalId"></h2>
+        <h3 id="modalTitle"></h3>
+      </div>
+      <button onclick="closeModal()">✕</button>
+    </div>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script src="Mis Casos.js"></script>
+</body>
+</html>

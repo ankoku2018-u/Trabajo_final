@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casos Sin Asignar - CSU</title>
+    <link rel="stylesheet" href="Sin Asignar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lucide/1.0.0/lucide.min.css">
+</head>
+<body>
+    <div class="min-h-screen bg-gray-50">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-content">
+                <div class="header-left">
+                    <div class="header-icon">
+                        <i data-lucide="user-x" class="header-icon-svg"></i>
+                    </div>
+                    <div>
+                        <h1 class="header-title">Casos Sin Asignar</h1>
+                        <p class="header-subtitle">Casos pendientes de asignación a técnicos</p>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="header-stats">
+                        <p class="stats-label">En cola de asignación</p>
+                        <p class="stats-value" id="queue-count">7</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Alert Banner -->
+            <div class="alert-banner">
+                <div class="alert-content">
+                    <i data-lucide="alert-triangle" class="alert-icon"></i>
+                    <div>
+                        <h3 class="alert-title">¡Atención! Casos pendientes de asignación</h3>
+                        <p class="alert-message" id="alert-message">
+                            Hay 1 casos urgentes y 2 casos de alta prioridad esperando asignación.
+                            Asigna estos casos lo antes posible para mantener los SLA.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <p class="stat-label">Total Sin Asignar</p>
+                        <i data-lucide="user-x" class="stat-icon stat-icon-red"></i>
+                    </div>
+                    <p class="stat-value" id="total-unassigned">7</p>
+                    <div class="stat-trend">
+                        <i data-lucide="trending-up" class="trend-icon"></i>
+                        +3 desde ayer
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <p class="stat-label">Urgentes</p>
+                        <i data-lucide="alert-triangle" class="stat-icon stat-icon-red"></i>
+                    </div>
+                    <p class="stat-value urgent" id="urgent-count">1</p>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <p class="stat-label">Alta Prioridad</p>
+                        <i data-lucide="alert-triangle" class="stat-icon stat-icon-orange"></i>
+                    </div>
+                    <p class="stat-value high" id="high-count">2</p>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <p class="stat-label">Tiempo Promedio Espera</p>
+                        <i data-lucide="clock" class="stat-icon stat-icon-yellow"></i>
+                    </div>
+                    <p class="stat-value average-time">18h</p>
+                </div>
+            </div>
+
+            <div class="main-content">
+                <!-- Unassigned Cases List -->
+                <div class="cases-list" id="cases-list">
+                    <!-- Los casos se cargarán dinámicamente aquí -->
+                </div>
+
+                <!-- Technicians Availability Sidebar -->
+                <div class="sidebar">
+                    <div class="technicians-card">
+                        <div class="technicians-header">
+                            <h3 class="technicians-title">Disponibilidad de Técnicos</h3>
+                        </div>
+                        <div class="technicians-list" id="technicians-list">
+                            <!-- Los técnicos se cargarán dinámicamente aquí -->
+                        </div>
+                    </div>
+
+                    <div class="suggestion-card">
+                        <h4 class="suggestion-title">💡 Sugerencia</h4>
+                        <p class="suggestion-text">
+                            Considera la carga actual y las habilidades de cada técnico al asignar casos para optimizar tiempos de respuesta.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Assignment Modal -->
+        <div class="modal-overlay" id="assign-modal">
+            <div class="modal">
+                <div class="modal-header">
+                    <h2 class="modal-title">Asignar Técnico</h2>
+                    <p class="modal-subtitle" id="modal-case-info">#40345678 - Error crítico en base de datos</p>
+                </div>
+
+                <div class="modal-body">
+                    <p class="skill-required">
+                        <strong>Habilidad requerida:</strong> <span id="modal-skill">Administración BD Oracle</span>
+                    </p>
+                    <div class="technicians-modal-list" id="technicians-modal-list">
+                        <!-- Los técnicos para asignar se cargarán dinámicamente aquí -->
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="cancel-btn" id="cancel-assign">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/1.0.0/lucide.min.js"></script>
+    <script src="Sin Asignar.js"></script>
+</body>
+</html>

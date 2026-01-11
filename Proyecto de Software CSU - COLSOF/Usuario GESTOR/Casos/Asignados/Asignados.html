@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CSU - Casos Asignados</title>
+  <link rel="stylesheet" href="Asignados.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-left">
+    <div class="icon">👥</div>
+    <div>
+      <h1>Casos Asignados</h1>
+      <p>Vista general de casos por técnico</p>
+    </div>
+  </div>
+  <div class="total">
+    <span>Total Asignados</span>
+    <strong id="totalCases"></strong>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- Técnicos -->
+  <section id="technicians" class="technicians"></section>
+
+  <!-- KPIs -->
+  <section class="kpis">
+    <div class="kpi blue">
+      <span>En Progreso</span>
+      <strong id="kpiProgress"></strong>
+    </div>
+    <div class="kpi yellow">
+      <span>Pendientes</span>
+      <strong id="kpiPending"></strong>
+    </div>
+    <div class="kpi red">
+      <span>Urgentes</span>
+      <strong id="kpiUrgent"></strong>
+    </div>
+    <div class="kpi purple">
+      <span>Programados</span>
+      <strong id="kpiScheduled"></strong>
+    </div>
+  </section>
+
+  <!-- Buscador -->
+  <div class="search">
+    <input type="text" placeholder="Buscar casos asignados...">
+  </div>
+
+  <!-- Tabla -->
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>ID / Título</th>
+          <th>Técnico</th>
+          <th>Cliente</th>
+          <th>Categoría</th>
+          <th>Prioridad</th>
+          <th>Estado</th>
+          <th>Fecha Límite</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="casesTable"></tbody>
+    </table>
+  </div>
+
+</main>
+
+<!-- Modal -->
+<div id="modal" class="modal hidden">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 id="modalId"></h2>
+      <button onclick="closeModal()">✕</button>
+    </div>
+    <div id="modalBody"></div>
+    <div class="modal-actions">
+      <button onclick="reassign()">Reasignar Caso</button>
+      <button onclick="closeModal()">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<script src="Asignados.js"></script>
+</body>
+</html>

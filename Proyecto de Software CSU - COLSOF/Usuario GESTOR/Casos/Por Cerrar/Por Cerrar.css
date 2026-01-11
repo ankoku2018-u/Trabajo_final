@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f3f4f6;
+}
+
+.header {
+  background: white;
+  padding: 20px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-left {
+  display: flex;
+  gap: 12px;
+}
+
+.icon {
+  font-size: 32px;
+}
+
+.pending strong {
+  font-size: 28px;
+  color: #ea580c;
+}
+
+.container {
+  max-width: 1600px;
+  margin: auto;
+  padding: 20px;
+}
+
+.alert {
+  background: #fff7ed;
+  border-left: 4px solid #f97316;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.kpi {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.kpi.red strong { color: #b91c1c; }
+.kpi.orange strong { color: #c2410c; }
+.kpi.yellow strong { color: #a16207; }
+
+.case {
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.case-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.priority-Urgente { background:#fee2e2; color:#991b1b; }
+.priority-Alta { background:#ffedd5; color:#9a3412; }
+.priority-Media { background:#fef9c3; color:#854d0e; }
+
+.days {
+  font-weight: bold;
+}
+
+.days.red { color:#b91c1c; }
+.days.orange { color:#c2410c; }
+.days.yellow { color:#a16207; }
+
+.attachments span {
+  background: #eff6ff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 13px;
+}
+
+.actions button {
+  padding: 8px 12px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.actions .view { background: #e5e7eb; }
+.actions .reject { background: #dc2626; color: white; }
+.actions .approve { background: #16a34a; color: white; }
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: white;
+  width: 900px;
+  max-width: 95%;
+  border-radius: 10px;
+}
+
+.modal-header {
+  padding: 15px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+}
+
+#modalBody {
+  padding: 20px;
+}
+
+.modal-actions {
+  padding: 15px;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  gap: 10px;
+}
+
+.modal-actions .reject {
+  background: #dc2626;
+  color: white;
+}
+
+.modal-actions .approve {
+  background: #16a34a;
+  color: white;
+}
