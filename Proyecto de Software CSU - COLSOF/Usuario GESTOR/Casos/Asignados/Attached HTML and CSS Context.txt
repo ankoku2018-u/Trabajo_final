@@ -1,0 +1,947 @@
+Attached HTML and CSS Context
+
+<html lang="es"><head><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borradores - CSU</title>
+    <link rel="stylesheet" href="../../Estilos.css">
+    <link rel="stylesheet" href="Borradores.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="sidebar-top">
+                <div class="logo-wrap">
+                    <img src="../../LOGO_COLSOF.png" alt="Logo" class="logo" aria-hidden="true">
+                    <h2 class="brand">COLSOF S.A.S</h2>
+                </div>
+                <p class="menu-label">Menu</p>
+            </div>
+
+            <ul class="menu-list">
+                <li class="menu-item">
+                    <a href="../../Menu principal.html">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M3 10.5L12 3l9 7.5V21a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V10.5z" stroke="#0b3a66" stroke-width="1.5" fill="#e8f0fb"></path>
+                        </svg>
+                        <span>Inicio</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="../../estadisticas/Menu - Estadisticas.html">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <rect x="3" y="13" width="6" height="8" rx="1.5" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.5"></rect>
+                            <rect x="9" y="3" width="6" height="18" rx="1.5" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.5"></rect>
+                            <rect x="15" y="9" width="6" height="12" rx="1.5" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.5"></rect>
+                        </svg>
+                        <span>Estadísticas</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="../../notificaciones/Menu - Notificaciones.html" class="notif">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M12 22a2 2 0 002-2H10a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h.09a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h.09a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v.09a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" stroke="#111" stroke-width="1.2" fill="none"></path>
+                        </svg>
+                        <span>Notificaciones</span>
+                    </a>
+                </li>
+                <li class="menu-item"><a href="../../reportes/Menu - Reportes.html">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M3 4h18v4H3zM3 10h18v4H3zM3 16h10v4H3z" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.2"></path>
+                    </svg>
+                    <span>Reportes</span>
+                </a></li>
+                <li class="menu-item"><a href="../../herramientas/Menu - Herramientas.html">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <circle cx="12" cy="12" r="9" stroke="#0b3a66" stroke-width="1.4" fill="#eef4ff"></circle>
+                        <path d="M12 7v5l4 2" stroke="#0b3a66" stroke-width="1.4"></path>
+                    </svg>
+                    <span>Herramientas</span>
+                </a></li>
+                <li class="menu-item group">
+                    <details>
+                        <summary>
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <circle cx="12" cy="8" r="4" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.5"></circle>
+                                <path d="M4 20c0-3.31 3.58-6 8-6s8 2.69 8 6" stroke="#1976d2" stroke-width="1.5" fill="none"></path>
+                            </svg>
+                            <span>Gestores</span>
+                            <span class="chev">▾</span>
+                        </summary>
+                        <ul class="sub-list">
+                            <li><a href="../../Centro de costos/Centro de costos.html">Centro de costos</a></li>
+                            <li><a href="../../Clientes.html">Clientes</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li class="menu-item group">
+                    <details open="">
+                        <summary>
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <rect x="3" y="6" width="18" height="12" rx="2" fill="#fffde7" stroke="#fbc02d" stroke-width="1.5"></rect>
+                                <circle cx="8" cy="12" r="2" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.2"></circle>
+                                <rect x="13" y="10" width="5" height="2" rx="1" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.2"></rect>
+                            </svg>
+                            <span>Casos</span>
+                            <span class="chev">▾</span>
+                        </summary>
+                        <ul class="sub-list">
+                            <li><a href="../Mis Casos/Mis Casos.html">Mis Casos</a></li>
+                            <li><a href="../Por Cerrar/Por Cerrar.html">Por cerrar</a></li>
+                            <li><a href="../../Casos_asignados.html">Asignados</a></li>
+                            <li><a href="../Sin Asignar/Sin Asignar.html">Sin Asignar</a></li>
+                            <li><a href="Borradores.html" class="active">Borradores</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li class="menu-item">
+                    <a href="../../configuracion/Menu - Configuracion.html">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <circle cx="12" cy="12" r="3" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.5"></circle>
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09a1.65 1.65 0 0 0 1.51-1z" stroke="#1976d2" stroke-width="1.2" fill="#e3f2fd"></path>
+                        </svg>
+                        <span>Configuración</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="sidebar-bottom"></div>
+        </nav>
+
+        <main class="main-content">
+            <div class="top-header">
+                <div class="header-left">
+                    <div style="height:52px"></div>
+                </div>
+                <div class="header-right">
+                    <div class="profile">
+                        <div class="avatar"><img src="../../LOGO_COLSOF.png" alt="avatar"></div>
+                        <div class="profile-info">
+                            <div class="profile-name">Juan Pérez</div>
+                            <div class="profile-email">JPerez@colsof.com.co</div>
+                        </div>
+                        <button class="profile-menu-btn" title="Opciones">▾</button>
+                        <div class="profile-menu">
+                            <button class="logout-btn">Cerrar sesión</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-card">
+                <header class="header">
+                    <div class="header-content">
+                        <div class="header-left">
+                            <div class="header-icon drafts-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="file-edit" class="lucide lucide-file-edit header-icon-svg"><path d="M12.659 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v9.34"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10.378 12.622a1 1 0 0 1 3 3.003L8.36 20.637a2 2 0 0 1-.854.506l-2.867.837a.5.5 0 0 1-.62-.62l.836-2.869a2 2 0 0 1 .506-.853z"></path></svg>
+                            </div>
+                            <div>
+                                <h1 class="header-title">Borradores</h1>
+                                <p class="header-subtitle">Casos guardados en borrador pendientes de publicación</p>
+                            </div>
+                        </div>
+                        <div class="header-right">
+                            <div class="header-stats">
+                                <p class="stats-label">Borradores guardados</p>
+                                <p class="stats-value" id="drafts-count">7</p>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="container">
+                    <div class="info-banner">
+                        <div class="info-content">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="alert-circle" class="lucide lucide-alert-circle info-icon"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg>
+                            <div>
+                                <h3 class="info-title">Información sobre borradores</h3>
+                                <p class="info-message">
+                                    Los borradores te permiten guardar casos incompletos para continuar más tarde. 
+                                    Completa todos los campos requeridos (mínimo 80% de completitud) antes de publicar como caso activo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stats-container">
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <p class="stat-label">Total Borradores</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="file-edit" class="lucide lucide-file-edit stat-icon stat-icon-gray"><path d="M12.659 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v9.34"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10.378 12.622a1 1 0 0 1 3 3.003L8.36 20.637a2 2 0 0 1-.854.506l-2.867.837a.5.5 0 0 1-.62-.62l.836-2.869a2 2 0 0 1 .506-.853z"></path></svg>
+                            </div>
+                            <p class="stat-value" id="total-drafts">7</p>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <p class="stat-label">Listos para Publicar</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle" class="lucide lucide-check-circle stat-icon stat-icon-green"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>
+                            </div>
+                            <p class="stat-value ready-count" id="ready-count">2</p>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <p class="stat-label">En Progreso</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="clock" class="lucide lucide-clock stat-icon stat-icon-yellow"><path d="M12 6v6l4 2"></path><circle cx="12" cy="12" r="10"></circle></svg>
+                            </div>
+                            <p class="stat-value progress-count" id="progress-count">4</p>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <p class="stat-label">Incompletos</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="alert-circle" class="lucide lucide-alert-circle stat-icon stat-icon-red"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg>
+                            </div>
+                            <p class="stat-value incomplete-count" id="incomplete-count">1</p>
+                        </div>
+                    </div>
+
+                    <div class="search-bar">
+                        <div class="search-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="search" class="lucide lucide-search search-icon"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg>
+                            <input type="text" placeholder="Buscar en borradores..." class="search-input" id="search-input">
+                        </div>
+                    </div>
+
+                    <div class="drafts-list" id="drafts-list"><div class="draft-card" data-id="DRAFT-001">
+            <div class="draft-content">
+                <!-- Header -->
+                <div class="draft-header">
+                    <div class="draft-info">
+                        <div class="draft-meta">
+                            <span class="draft-id">DRAFT-001</span>
+                            <span class="priority-badge priority-high">Alta</span>
+                            <span class="draft-category">HARDWARE</span>
+                            <div class="draft-time">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="clock" class="lucide lucide-clock draft-time-icon"><path d="M12 6v6l4 2"></path><circle cx="12" cy="12" r="10"></circle></svg>
+                                <span>Hace 1 hora</span>
+                            </div>
+                        </div>
+                        <h3 class="draft-title">Actualización servidores Datacenter</h3>
+                        <p class="draft-client">ECOPETROL</p>
+                    </div>
+                    
+                    <div class="draft-completeness">
+                        <p class="completeness-label">Completitud</p>
+                        <p class="completeness-value completeness-medium">75%</p>
+                    </div>
+                </div>
+                
+                <!-- Progress Bar -->
+                <div class="progress-bar">
+                    <div class="progress-fill progress-fill-yellow" style="width: 75%"></div>
+                </div>
+                
+                <!-- Missing Fields -->
+                
+                    <div class="missing-fields">
+                        <p class="missing-fields-title">Campos pendientes por completar:</p>
+                        <div class="missing-fields-list">
+                            <span class="missing-field-tag">Fecha límite</span><span class="missing-field-tag">Archivos adjuntos</span>
+                        </div>
+                    </div>
+                
+                
+                <!-- Info Grid -->
+                <div class="draft-details">
+                    <div class="draft-detail">
+                        <p class="detail-label">Creado</p>
+                        <p class="detail-value">10 Ene 2025, 14:30</p>
+                    </div>
+                    <div class="draft-detail">
+                        <p class="detail-label">Contacto</p>
+                        <p class="detail-value">María Rodríguez</p>
+                    </div>
+                    <div class="draft-detail">
+                        <p class="detail-label">Tiempo Estimado</p>
+                        <p class="detail-value">6 horas</p>
+                    </div>
+                    <div class="draft-detail">
+                        <p class="detail-label">Estado</p>
+                        <p class="detail-value completeness-medium">
+                            En progreso
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Actions -->
+                <div class="draft-actions">
+                    <button class="btn btn-outline view-details-btn" data-draft-id="DRAFT-001">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="eye" class="lucide lucide-eye btn-icon"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                        Ver Detalles
+                    </button>
+                    <button class="btn btn-primary edit-draft-btn" data-draft-id="DRAFT-001">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="edit" class="lucide lucide-edit btn-icon"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z"></path></svg>
+                        Continuar Editando
+                    </button>
+                    <button class="btn btn-success publish-draft-btn" data-draft-id="DRAFT-001" disabled="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="send" class="lucide lucide-send btn-icon"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg>
+                        Publicar
+                    </button>
+                    <button class="btn btn-danger btn-small delete-draft-btn" data-draft-id="DRAFT-001">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="trash-2" class="lucide lucide-trash-2 btn-icon"><path d="M10 11v6"></path><path d="M14 11v6"></path><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"></path><path d="M3 6h18"></path><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div><div class="draft-card" data-id="DRAFT-002">
+            <div class="draft-content">
+                <!-- Header -->
+                <div class="draft-header">
+                    <div class="draft-info">
+                        <div class="draft-meta">
+                            <span class="draft-id">DRAFT-002</span>
+                            <span class="priority-badge priority-medium">Media</span>
+                            <span class="draft-category">SOFTWARE</span>
+                            <div class="draft-time">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="clock" class="lucide lucide-clock draft-time-icon"><path d="M12 6v6l4 2"></path><circle cx="12" cy="12" r="10"></circle></svg>
+                                <span>Hace 3 horas</span>
+                            </div>
+                        </div>
+                        <h3 class="draft-title">Instalación Office 365 nuevos usuarios</h3>
+                        <p class="draft-client">BANCO AGRARIO</p>
+                    </div>
+                    
+                    <div class="draft-completeness">
+                        <p class="completeness-label">Completitud</p>
+                        <p class="completeness-value completeness-medium">60%</p>
+                    </div>
+                </div>
+                
+                <!-- Progress Bar -->
+                <div class="progress-bar">
+                    <div class="progress-fill progress-fill-yellow" style="width: 60%"></div>
+                </div>
+                
+                <!-- Missing Fields -->
+                
+                    <div class="missing-fields">
+                        <p class="missing-fields-title">Campos pendientes por completar:</p>
+                        <div class="missing-fields-list">
+                            <span class="missing-field-tag">Prioridad</span><span class="missing-field-tag">Contacto</span><span class="missing-field-tag">Descripción detallada</span>
+                        </div>
+                    </div>
+                
+                
+                <!-- Info Grid -->
+                <div class="draft-details">
+                    <div class="draft-detail">
+                        <p class="detail-label">Creado</p>
+                        <p class="detail-value">10 Ene 2025, 11:15</p>
+                    </div>
+                    <div class="draft-detail">
+                        <p class="detail-label">Contacto</p>
+                        <p class="detail-value">No asignado</p>
+                    </div>
+                    <div class="draft-detail">
+                        <p class="detail-label">Tiempo Estimado</p>
+                        <p class="detail-value">No definido</p>
+                    </div>
+                    <div class="draft-detail">
+                        <p class="detail-label">Estado</p>
+                        <p class="detail-value completeness-medium">
+                            En progreso
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Actions -->
+                <div class="draft-actions">
+                    <button class="btn btn-outline view-details-btn" data-draft-id="DRAFT-002">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="eye" class="lucide lucide-eye btn-icon"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                        Ver Detalles
+                    </button>
+                    <button class="btn btn-primary edit-draft-btn" data-draft-id="DRAFT-002">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="edit" class="lucide lucide-edit btn-icon"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z"></path></svg>
+                        Continuar Editando
+                    </button>
+                    <button class="btn btn-success publish-draft-btn" data-draft-id="DRAFT-002" disabled="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="send" class="lucide lucide-send btn-icon"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg>
+                        Publicar
+                    </button>
+                    <button class="btn btn-danger btn-small delete-draft-btn" data-draft-id="DRAFT-002">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="trash-2" class="lucide lucide-trash-2 btn-icon"><path d="M10 11v6"></path><path d="M14 11v6"></path><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"></path><path d="M3 6h18"></path><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div><div class="draft-card" data-id="DRAFT-003">
+            <div class="draft-content">
+                <!-- Header -->
+                <div class="draft-header">
+                    <div class="draft-info">
+                        <div class="draft-meta">
+                            <span class="draft-id">DRAFT-003</span>
+                            <span class="priority-badge priority-urgent">Urgente</span>
+                            <span class="draft-category">REDES</span>
+                            <div class="draft-time">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="clock" class="lucide lucide-clock draft-time-icon"><path d="M12 6v6l4 2"></path><circle cx="12" cy="12" r="10"></circle></svg>
+                                <span>Hace 1 día</span>
+                            </div>
+                        </div>
+                        <h3 class="draft-title">Reparación switch principal</h3>
+                        <p class="draft-client">QUALA SA</p>
+                    </div>
+                    
+                    <div class="draft-completeness">
+                        <p class="completeness-label">Completitud</p>
+                        <p class="completeness-value completeness-high">90%</p>
+                    </div>
+                </div>
+                
+                <!-- Progress Bar -->
+                <div class="progress-bar">
+                    <div class="progress-fill progress-fill-green" style="width: 90%"></div>
+                </div>
+                
+                <!-- Missing Fields -->
+                
+                    <div class="missing-fields">
+                        <p class="missing-fields-title">Campos pendientes por completar:</p>
+                        <div class="missing-fields-list">
+                            <span class="missing-field-tag">Archivos adjuntos</span>
+                        </div>
+                    </div>
+                
+                
+                <!-- Info Grid -->
+                <div class="draft-details">
+                    <div class="draft-detail">
+                        <p class="detail-label">Creado</p>
+                        <p class="detail-value">09 Ene 2025, 16:45</p>
+                    </div>
+                    <div class="draft-detail">
+                        <p class="detail-label">Contacto</p>
+                        <p class="detail-value">Andrea Gómez</p>
+                    </div>
+                    <div class="draft-detail">
+                        <p class="detail-label">Tiempo Estimado</p>
+                        <p class="detail-value">3 horas</p>
+                    </div>
+                    <div class="draft-detail">
+                        <p class="detail-label">Estado</p>
+                        <p class="detail-value completeness-high">
+                            Listo
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Actions -->
+                <div class="draft-actions">
+                    <button class="btn btn-outline view-details-btn" data-draft-id="DRAFT-003">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="eye" class="lucide lucide-eye btn-icon"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                        Ver Detalles
+                    </button>
+                    <button class="btn btn-primary edit-draft-btn" data-draft-id="DRAFT-003">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="edit" class="lucide lucide-edit btn-icon"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z"></path></svg>
+                        Continuar Editando
+                    </button>
+                    <button class="btn btn-success publish-draft-btn" data-draft-id="DRAFT-003">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="send" class="lucide lucide-send btn-icon"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg>
+                        Publicar
+                    </button>
+                    <button class="btn btn-danger btn-small delete-draft-btn" data-draft-id="DRAFT-003">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="trash-2" class="lucide lucide-trash-2 btn-icon"><path d="M10 11v6"></path><path d="M14 11v6"></path><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"></path><path d="M3 6h18"></path><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div><div class="draft-card" data-id="DRAFT-004">
+            <div class="draft-content">
+                <!-- Header -->
+                <div class="draft-header">
+                    <div class="draft-info">
+                        <div class="draft-meta">
+                            <span class="draft-id">DRAFT-004</span>
+                            <span class="priority-badge priority-medium">Media</span>
+                            <span class="draft-category">SOFTWARE</span>
+                            <div class="draft-time">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="clock" class="lucide lucide-clock draft-time-icon"><path d="M12 6v6l4 2"></path><circle cx="12" cy="12" r="10"></circle></svg>
+                                <span>Hace 1 día</span>
+                            </div>
+                        </div>
+                        <h3 class="draft-title">Configuración backup automático</h3>
+                        <p class="draft-client">IDIGER</p>
+                    </div>
+                    
+                    <div class="draft-completeness">
+                        <p class="completeness-label">Completitud</p>
+                        <p class="completeness-value completeness-low">45%</p>
+                    </div>
+                </div>
+                
+                <!-- Progress Bar -->
+                <div class="progress-bar">
+                    <div class="progress-fill progress-fill-red" style="width: 45%"></div>
+                </div>
+                
+                <!-- Missing Fields -->
+                
+                    <div class="missing-fields">
+                        <p class="missing-fields-title">Campos pendientes por completar:</p>
+                        <div class="missing-fields-list">
+                            <span class="missing-field-tag">Categoría</span><span class="missing-field-tag">Fecha límite</span><span class="missing-field-tag">Tiempo estimado</span><span class="missing-field-tag">Contacto</span>
+                        </div>
+                    </div>
+                
+                
+                <!-- Info Grid -->
+                <div class="draft-details">
+                    <div class="draft-detail">
+                        <p class="detail-label">Creado</p>
+                        <p class="detail-value">09 Ene 2025, 10:00</p>
+                    </div>
+                    <div class="draft-detail">
+                        <p class="detail-label">Contacto</p>
+                        <p class="detail-value">No asignado</p>
+                    </div>
+                    <div class="draft-detail">
+                        <p class="detail-label">Tiempo Estimado</p>
+                        <p class="detail-value">No definido</p>
+                    </div>
+                    <div class="draft-detail">
+                        <p class="detail-label">Estado</p>
+                        <p class="detail-value completeness-low">
+                            Incompleto
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Actions -->
+                <div class="draft-actions">
+                    <button class="btn btn-outline view-details-btn" data-draft-id="DRAFT-004">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="eye" class="lucide lucide-eye btn-icon"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                        Ver Detalles
+                    </button>
+                    <button class="btn btn-primary edit-draft-btn" data-draft-id="DRAFT-004">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="edit" class="lucide lucide-edit btn-icon"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z"></path></svg>
+                        Continuar Editando
+                    </button>
+                    <button class="btn btn-success publish-draft-btn" data-draft-id="DRAFT-004" disabled="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="send" class="lucide lucide-send btn-icon"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg>
+                        Publicar
+                    </button>
+                    <button class="btn btn-danger btn-small delete-draft-btn" data-draft-id="DRAFT-004">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="trash-2" class="lucide lucide-trash-2 btn-icon"><path d="M10 11v6"></path><path d="M14 11v6"></path><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"></path><path d="M3 6h18"></path><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div><div class="draft-card" data-id="DRAFT-005">
+            <div class="draft-content">
+                <!-- Header -->
+                <div class="draft-header">
+                    <div class="draft-info">
+                        <div class="draft-meta">
+                            <span class="draft-id">DRAFT-005</span>
+                            <span class="priority-badge priority-low">Baja</span>
+                            <span class="draft-category">HARDWARE</span>
+                            <div class="draft-time">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="clock" class="lucide lucide-clock draft-time-icon"><path d="M12 6v6l4 2"></path><circle cx="12" cy="12" r="10"></circle></svg>
+                                <span>Hace 2 días</span>
+                            </div>
+                        </div>
+                        <h3 class="draft-title">Mantenimiento preventivo UPS</h3>
+                        <p class="draft-client">CANCEROLÓGICO</p>
+                    </div>
+                    
+                    <div class="draft-completeness">
+                        <p class="completeness-label">Completitud</p>
+                        <p class="completeness-value completeness-high">85%</p>
+                    </div>
+                </div>
+                
+                <!-- Progress Bar -->
+                <div class="progress-bar">
+                    <div class="progress-fill progress-fill-green" style="width: 85%"></div>
+                </div>
+                
+                <!-- Missing Fields -->
+                
+                    <div class="missing-fields">
+                        <p class="missing-fields-title">Campos pendientes por completar:</p>
+                        <div class="missing-fields-list">
+                            <span class="missing-field-tag">Fecha límite</span>
+                        </div>
+                    </div>
+                
+                
+                <!-- Info Grid -->
+                <div class="draft-details">
+                    <div class="draft-detail">
+                        <p class="detail-label">Creado</p>
+                        <p class="detail-value">08 Ene 2025, 15:20</p>
+                    </div>
+                    <div class="draft-detail">
+                        <p class="detail-label">Contacto</p>
+                        <p class="detail-value">Patricia Ruiz</p>
+                    </div>
+                    <div class="draft-detail">
+                        <p class="detail-label">Tiempo Estimado</p>
+                        <p class="detail-value">2 horas</p>
+                    </div>
+                    <div class="draft-detail">
+                        <p class="detail-label">Estado</p>
+                        <p class="detail-value completeness-high">
+                            Listo
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Actions -->
+                <div class="draft-actions">
+                    <button class="btn btn-outline view-details-btn" data-draft-id="DRAFT-005">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="eye" class="lucide lucide-eye btn-icon"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                        Ver Detalles
+                    </button>
+                    <button class="btn btn-primary edit-draft-btn" data-draft-id="DRAFT-005">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="edit" class="lucide lucide-edit btn-icon"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z"></path></svg>
+                        Continuar Editando
+                    </button>
+                    <button class="btn btn-success publish-draft-btn" data-draft-id="DRAFT-005">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="send" class="lucide lucide-send btn-icon"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg>
+                        Publicar
+                    </button>
+                    <button class="btn btn-danger btn-small delete-draft-btn" data-draft-id="DRAFT-005">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="trash-2" class="lucide lucide-trash-2 btn-icon"><path d="M10 11v6"></path><path d="M14 11v6"></path><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"></path><path d="M3 6h18"></path><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div><div class="draft-card" data-id="DRAFT-006">
+            <div class="draft-content">
+                <!-- Header -->
+                <div class="draft-header">
+                    <div class="draft-info">
+                        <div class="draft-meta">
+                            <span class="draft-id">DRAFT-006</span>
+                            <span class="priority-badge priority-high">Alta</span>
+                            <span class="draft-category">SOFTWARE</span>
+                            <div class="draft-time">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="clock" class="lucide lucide-clock draft-time-icon"><path d="M12 6v6l4 2"></path><circle cx="12" cy="12" r="10"></circle></svg>
+                                <span>Hace 2 días</span>
+                            </div>
+                        </div>
+                        <h3 class="draft-title">Migración email a cloud</h3>
+                        <p class="draft-client">COLSOF SAS</p>
+                    </div>
+                    
+                    <div class="draft-completeness">
+                        <p class="completeness-label">Completitud</p>
+                        <p class="completeness-value completeness-medium">70%</p>
+                    </div>
+                </div>
+                
+                <!-- Progress Bar -->
+                <div class="progress-bar">
+                    <div class="progress-fill progress-fill-yellow" style="width: 70%"></div>
+                </div>
+                
+                <!-- Missing Fields -->
+                
+                    <div class="missing-fields">
+                        <p class="missing-fields-title">Campos pendientes por completar:</p>
+                        <div class="missing-fields-list">
+                            <span class="missing-field-tag">Tiempo estimado</span><span class="missing-field-tag">Archivos adjuntos</span>
+                        </div>
+                    </div>
+                
+                
+                <!-- Info Grid -->
+                <div class="draft-details">
+                    <div class="draft-detail">
+                        <p class="detail-label">Creado</p>
+                        <p class="detail-value">08 Ene 2025, 09:30</p>
+                    </div>
+                    <div class="draft-detail">
+                        <p class="detail-label">Contacto</p>
+                        <p class="detail-value">Diana López</p>
+                    </div>
+                    <div class="draft-detail">
+                        <p class="detail-label">Tiempo Estimado</p>
+                        <p class="detail-value">No definido</p>
+                    </div>
+                    <div class="draft-detail">
+                        <p class="detail-label">Estado</p>
+                        <p class="detail-value completeness-medium">
+                            En progreso
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Actions -->
+                <div class="draft-actions">
+                    <button class="btn btn-outline view-details-btn" data-draft-id="DRAFT-006">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="eye" class="lucide lucide-eye btn-icon"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                        Ver Detalles
+                    </button>
+                    <button class="btn btn-primary edit-draft-btn" data-draft-id="DRAFT-006">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="edit" class="lucide lucide-edit btn-icon"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z"></path></svg>
+                        Continuar Editando
+                    </button>
+                    <button class="btn btn-success publish-draft-btn" data-draft-id="DRAFT-006" disabled="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="send" class="lucide lucide-send btn-icon"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg>
+                        Publicar
+                    </button>
+                    <button class="btn btn-danger btn-small delete-draft-btn" data-draft-id="DRAFT-006">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="trash-2" class="lucide lucide-trash-2 btn-icon"><path d="M10 11v6"></path><path d="M14 11v6"></path><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"></path><path d="M3 6h18"></path><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div><div class="draft-card" data-id="DRAFT-007">
+            <div class="draft-content">
+                <!-- Header -->
+                <div class="draft-header">
+                    <div class="draft-info">
+                        <div class="draft-meta">
+                            <span class="draft-id">DRAFT-007</span>
+                            <span class="priority-badge priority-medium">Media</span>
+                            <span class="draft-category">HARDWARE</span>
+                            <div class="draft-time">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="clock" class="lucide lucide-clock draft-time-icon"><path d="M12 6v6l4 2"></path><circle cx="12" cy="12" r="10"></circle></svg>
+                                <span>Hace 3 días</span>
+                            </div>
+                        </div>
+                        <h3 class="draft-title">Instalación sistema biométrico</h3>
+                        <p class="draft-client">SUPERSALUD</p>
+                    </div>
+                    
+                    <div class="draft-completeness">
+                        <p class="completeness-label">Completitud</p>
+                        <p class="completeness-value completeness-medium">55%</p>
+                    </div>
+                </div>
+                
+                <!-- Progress Bar -->
+                <div class="progress-bar">
+                    <div class="progress-fill progress-fill-yellow" style="width: 55%"></div>
+                </div>
+                
+                <!-- Missing Fields -->
+                
+                    <div class="missing-fields">
+                        <p class="missing-fields-title">Campos pendientes por completar:</p>
+                        <div class="missing-fields-list">
+                            <span class="missing-field-tag">Descripción detallada</span><span class="missing-field-tag">Fecha límite</span><span class="missing-field-tag">Tiempo estimado</span>
+                        </div>
+                    </div>
+                
+                
+                <!-- Info Grid -->
+                <div class="draft-details">
+                    <div class="draft-detail">
+                        <p class="detail-label">Creado</p>
+                        <p class="detail-value">07 Ene 2025, 13:00</p>
+                    </div>
+                    <div class="draft-detail">
+                        <p class="detail-label">Contacto</p>
+                        <p class="detail-value">Roberto Castro</p>
+                    </div>
+                    <div class="draft-detail">
+                        <p class="detail-label">Tiempo Estimado</p>
+                        <p class="detail-value">No definido</p>
+                    </div>
+                    <div class="draft-detail">
+                        <p class="detail-label">Estado</p>
+                        <p class="detail-value completeness-medium">
+                            En progreso
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Actions -->
+                <div class="draft-actions">
+                    <button class="btn btn-outline view-details-btn" data-draft-id="DRAFT-007">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="eye" class="lucide lucide-eye btn-icon"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                        Ver Detalles
+                    </button>
+                    <button class="btn btn-primary edit-draft-btn" data-draft-id="DRAFT-007">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="edit" class="lucide lucide-edit btn-icon"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z"></path></svg>
+                        Continuar Editando
+                    </button>
+                    <button class="btn btn-success publish-draft-btn" data-draft-id="DRAFT-007" disabled="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="send" class="lucide lucide-send btn-icon"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg>
+                        Publicar
+                    </button>
+                    <button class="btn btn-danger btn-small delete-draft-btn" data-draft-id="DRAFT-007">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="trash-2" class="lucide lucide-trash-2 btn-icon"><path d="M10 11v6"></path><path d="M14 11v6"></path><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"></path><path d="M3 6h18"></path><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div></div>
+                </div>
+
+                <div class="modal-overlay" id="detail-modal">
+                    <div class="modal">
+                        <div class="modal-header">
+                            <div class="modal-title-section">
+                                <div class="modal-title-row">
+                                    <h2 class="modal-title" id="modal-draft-id">DRAFT-001</h2>
+                                    <span class="priority-badge" id="modal-priority">Alta</span>
+                                </div>
+                                <h3 class="modal-subtitle" id="modal-draft-title">Actualización servidores Datacenter</h3>
+                            </div>
+                            <button class="modal-close" id="close-detail-modal">✕</button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="completeness-section">
+                                <div class="completeness-header">
+                                    <p class="completeness-label">Progreso de Completitud</p>
+                                    <p class="completeness-value" id="modal-completeness">75%</p>
+                                </div>
+                                <div class="completeness-bar">
+                                    <div class="completeness-fill" id="modal-completeness-bar"></div>
+                                </div>
+                            </div>
+
+                            <div class="missing-fields-section" id="modal-missing-fields"></div>
+
+                            <div class="details-grid">
+                                <div class="detail-item">
+                                    <p class="detail-label">Cliente</p>
+                                    <p class="detail-value" id="modal-client">ECOPETROL</p>
+                                </div>
+                                <div class="detail-item">
+                                    <p class="detail-label">Categoría</p>
+                                    <p class="detail-value" id="modal-category">HARDWARE</p>
+                                </div>
+                                <div class="detail-item">
+                                    <p class="detail-label">Creado</p>
+                                    <p class="detail-value" id="modal-created">10 Ene 2025, 14:30</p>
+                                </div>
+                                <div class="detail-item">
+                                    <p class="detail-label">Última Modificación</p>
+                                    <p class="detail-value" id="modal-modified">Hace 1 hora</p>
+                                </div>
+                                <div class="detail-item">
+                                    <p class="detail-label">Contacto</p>
+                                    <p class="detail-value" id="modal-contact">María Rodríguez</p>
+                                </div>
+                                <div class="detail-item">
+                                    <p class="detail-label">Teléfono</p>
+                                    <p class="detail-value" id="modal-phone">+57 310 456 7890</p>
+                                </div>
+                            </div>
+
+                            <div class="description-section" id="modal-description-section"></div>
+                            <div class="notes-section" id="modal-notes-section"></div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" id="continue-editing-btn">Continuar Editando</button>
+                            <button class="btn btn-success" id="publish-draft-btn">Publicar Caso</button>
+                            <button class="btn btn-outline" id="close-modal-btn">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-overlay" id="delete-modal">
+                    <div class="delete-modal">
+                        <div class="delete-modal-content">
+                            <div class="delete-modal-header">
+                                <div class="delete-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="trash-2" class="lucide lucide-trash-2 delete-icon-svg"><path d="M10 11v6"></path><path d="M14 11v6"></path><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"></path><path d="M3 6h18"></path><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                                </div>
+                                <div>
+                                    <h3 class="delete-title">Eliminar Borrador</h3>
+                                    <p class="delete-subtitle">Esta acción no se puede deshacer</p>
+                                </div>
+                            </div>
+                            <p class="delete-message">
+                                ¿Estás seguro que deseas eliminar el borrador <strong id="delete-draft-id">DRAFT-001</strong>?
+                                <br>
+                                <span class="delete-draft-title" id="delete-draft-title">Actualización servidores Datacenter</span>
+                            </p>
+                            <div class="delete-modal-footer">
+                                <button class="btn btn-outline" id="cancel-delete-btn">Cancelar</button>
+                                <button class="btn btn-danger" id="confirm-delete-btn">Eliminar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        // Inicializar íconos de Lucide
+        lucide.createIcons();
+    </script>
+    <script src="Borradores.js"></script>
+
+</body></html>
+
+
+/* Matched Rule from user-agent */
+html {
+  display: block;
+}
+
+/* Matched Rule from user-agent */
+:root {
+  view-transition-name: root;
+}
+
+/* Matched Rule from regular */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  box-sizing: border-box;
+}
+
+/* Matched Rule from regular */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  box-sizing: border-box;
+}
+
+/* Matched Rule from regular */
+:root {
+  --bg: #f6f7fb;
+  --surface: #fff;
+  --brand-600: #15467b;
+  --brand-700: #0f3f86;
+  --muted: #7b8694;
+  --text: #111827;
+  --accent: #1976d2;
+  --danger: #dc2626;
+  --card-border: #ebedf2;
+  --radius: 10px;
+  --gap: 16px;
+  --shadow-sm: 0 2px 12px rgba(21,70,123,0.06);
+  --shadow-md: 0 6px 18px rgba(11,58,102,0.08);
+  --kpi-padding: 18px;
+  --icon-size: 20px;
+  --bg: #f6f7fb;
+  --surface: #fff;
+  --brand-600: #15467b;
+  --brand-700: #0f3f86;
+  --muted: #7b8694;
+  --text: #111827;
+  --accent: #1976d2;
+  --danger: #dc2626;
+  --card-border: #ebedf2;
+  --radius: 10px;
+  --gap: 16px;
+  --shadow-sm: 0 2px 12px rgba(21,70,123,0.06);
+  --shadow-md: 0 6px 18px rgba(11,58,102,0.08);
+  --kpi-padding: 18px;
+  --icon-size: 20px;
+}
