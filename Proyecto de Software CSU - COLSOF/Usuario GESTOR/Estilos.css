@@ -469,11 +469,11 @@ h1 { font-size: 24px; color: #0b3a66; margin-bottom: 10px; }
 /* Botones */
 .btn { height: 38px; padding: 0 14px; border-radius: 10px; font-weight: 600; cursor: pointer; border: 1px solid transparent; background: #e7eaf1; color: #1f2937; transition: all .16s ease; }
 .btn:hover { filter: brightness(0.98); }
-.btn.primary { background: #1f5bb5; color: #fff; box-shadow: 0 6px 18px rgba(31,91,181,.18); }
-.btn.primary:hover { background: #174fa8; transform: translateY(-1px); }
-.btn.outline { background: #fff; border-color: #d7dbe3; }
-.btn.outline.light { background: #fff; border-color: #e0e4eb; color: #475569; }
-.btn.ghost { background: #fff; border-color: #d7dbe3; }
+.btn.primary { background: var(--brand-600); color: #fff; box-shadow: 0 6px 18px rgba(31,91,181,.18); }
+.btn.primary:hover { background: var(--brand-700); transform: translateY(-1px); }
+.btn.outline { background: var(--brand-600); border-color: var(--brand-600); color: #fff; }
+.btn.outline.light { background: var(--brand-600); border-color: var(--brand-600); color: #fff; }
+.btn.ghost { background: var(--brand-600); border-color: var(--brand-600); color: #fff; }
 
 .actions { display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
 
