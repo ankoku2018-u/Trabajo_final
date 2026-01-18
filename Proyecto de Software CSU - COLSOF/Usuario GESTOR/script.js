@@ -7,9 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 
-  const showModal = (id) => { const m = document.getElementById(id); if (m) m.style.display = 'flex'; };
-  const hideModal = (id) => { const m = document.getElementById(id); if (m) m.style.display = 'none'; };
-
   // Determinar ruta de la API según dónde estemos (Raíz o Subcarpeta)
   const getApiUrl = () => {
     // Si la URL contiene 'Usuario GESTOR', el api.php está en la misma carpeta
@@ -19,60 +16,53 @@ document.addEventListener('DOMContentLoaded', () => {
     return 'Proyecto de Software CSU - COLSOF/Usuario GESTOR/api.php';
   };
 
-  // =====================
-  // Modal de "En proceso de construcción"
-  // =====================
-  const cerrarModalBtn = document.getElementById('cerrar-modal');
-  if (cerrarModalBtn) cerrarModalBtn.addEventListener('click', () => hideModal('modal-construccion'));
+  // Determinar si estamos en una subcarpeta
+  const isInSubfolder = () => {
+    return window.location.pathname.includes('estadisticas') ||
+           window.location.pathname.includes('notificaciones') ||
+           window.location.pathname.includes('reportes') ||
+           window.location.pathname.includes('herramientas') ||
+           window.location.pathname.includes('configuracion') ||
+           window.location.pathname.includes('Casos') ||
+           window.location.pathname.includes('Centro de costos') ||
+           window.location.pathname.includes('Clientes');
+  };
 
   // Interceptar enlaces del menú (excepto Inicio si existe)
   $$('.menu-list a').forEach(a => {
     if (a.id === 'link-inicio' || a.getAttribute('href').includes('Menu principal.html')) return; // dejar navegar
 
+    const inSubfolder = isInSubfolder();
+
     // Permitir navegación a Notificaciones
     if (a.textContent.includes('Notificaciones') || a.querySelector('.badge')) {
-      a.href = '../../Menu - Notificaciones.html';
+      a.href = inSubfolder ? '../notificaciones/Menu - Notificaciones.html' : 'notificaciones/Menu - Notificaciones.html';
       return;
     }
 
     // Permitir navegación a Estadísticas
     if (a.textContent.includes('Estadísticas') || a.textContent.includes('Estadisticas')) {
-      a.href = '../../Menu - Estadisticas.html';
+      a.href = inSubfolder ? '../estadisticas/Menu - Estadisticas.html' : 'estadisticas/Menu - Estadisticas.html';
       return;
     }
 
     // Permitir navegación a Reportes
     if (a.textContent.includes('Reportes')) {
-      a.href = '../../Menu - Reportes.html';
+      a.href = inSubfolder ? '../reportes/Menu - Reportes.html' : 'reportes/Menu - Reportes.html';
       return;
     }
 
     // Permitir navegación a Herramientas
     if (a.textContent.includes('Herramientas')) {
-      a.href = 'Menu - Herramientas.html';
+      a.href = inSubfolder ? '../herramientas/Menu - Herramientas.html' : 'herramientas/Menu - Herramientas.html';
       return;
     }
 
     // Permitir navegación a Configuración
     if (a.textContent.includes('Configuración') || a.textContent.includes('Configuracion')) {
-      a.href = '../../Menu - Configuracion.html';
+      a.href = inSubfolder ? '../configuracion/Menu - Configuracion.html' : 'configuracion/Menu - Configuracion.html';
       return;
     }
-
-
-
-    a.addEventListener('click', (e) => {
-      e.preventDefault();
-      showModal('modal-construccion');
-    });
-  });
-  // Submenús
-  $$('.sub-list a').forEach(a => {
-    a.addEventListener('click', (e) => { e.preventDefault(); showModal('modal-construccion'); });
-  });
-  // Botones de filtros (si existen)
-  $$('.filters-btn').forEach(btn => {
-    btn.addEventListener('click', (e) => { e.preventDefault(); showModal('modal-construccion'); });
   });
 
   // =====================
@@ -113,12 +103,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnBorrador = document.getElementById('btn-guardar-borrador');
   const btnCancelar = document.getElementById('btn-cancelar');
 
-  // Guardar borrador -> modal construcción
-  if (btnBorrador) btnBorrador.addEventListener('click', (e) => { e.preventDefault(); showModal('modal-construccion'); });
-
-  // Importar XLSX -> modal construcción
+  // Importar XLSX (placeholder; sin modal de construcción)
   const btnImportar = document.querySelector('.import-btn');
-  if (btnImportar) btnImportar.addEventListener('click', (e) => { e.preventDefault(); showModal('modal-construccion'); });
+  if (btnImportar) btnImportar.addEventListener('click', (e) => { e.preventDefault(); });
 
   // Crear Caso -> modal éxito + redirección
   if (btnCrear) {

@@ -21,14 +21,13 @@
       <div class="menu-label">Menu</div>
       <ul class="menu-list">
         <li class="menu-item active">
-          <a href="Menu principal Administrador.html">
+          <a href="#">
             <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M3 10.5L12 3l9 7.5V21a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V10.5z" stroke="#0b3a66" stroke-width="1.5" fill="#e8f0fb"/>
             </svg>
             <span>Inicio</span>
           </a>
         </li>
-
         <li class="menu-item"><a href="#" class="open-modal">
             <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <rect x="3" y="13" width="6" height="8" rx="1.5" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.5"/>
@@ -53,7 +52,7 @@
               <span class="chev">▾</span>
             </summary>
             <ul class="sub-list">
-
+              <li><a href="Creacion de usuarios.html">Registrar</a></li>
               <li><a href="#">Lista</a></li>
               <li><a href="#" class="open-modal">Roles</a></li>
               <li><a href="#" class="open-modal">Monitoreo</a></li>
@@ -84,13 +83,6 @@
               <path d="M18 16v-5a6 6 0 10-12 0v5l-2 2h16l-2-2z" stroke="#111" stroke-width="1.2" fill="none"/>
             </svg>
             <span>Notificaciones</span> <span class="badge">10</span></a>
-        </li>
-        <li class="menu-item">
-          <a href="#" class="open-modal">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M3 4h18v4H3zM3 10h18v4H3zM3 16h10v4H3z" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.2"/>
-            </svg>
-            <span>Reportes</span></a>
         </li>
         <li class="menu-item">
           <a href="#" class="open-modal">
@@ -126,30 +118,26 @@
         </div>
       </div>
 
-      <!-- Botón de creación rápida -->
-      <div class="content-tools">
-      </div>
-
       <!-- Tarjetas estadísticas -->
       <section class="stats-grid">
         <div class="stat-card">
           <div class="stat-title">Solucionados</div>
-          <div class="stat-value">...</div>
+          <div class="stat-value">12,426</div>
           <div class="stat-change positive">+ 36% ↑</div>
         </div>
         <div class="stat-card">
           <div class="stat-title">Creados</div>
-          <div class="stat-value">...</div>
+          <div class="stat-value">23,848</div>
           <div class="stat-change negative">+ 14% ↓</div>
         </div>
         <div class="stat-card">
           <div class="stat-title">En Pausa</div>
-          <div class="stat-value">...</div>
+          <div class="stat-value">8,432</div>
           <div class="stat-change positive">+ 36% ↑</div>
         </div>
         <div class="stat-card">
           <div class="stat-title">Cerrados</div>
-          <div class="stat-value">...</div>
+          <div class="stat-value">3,493</div>
           <div class="stat-change positive">+ 36% ↑</div>
         </div>
       </section>
@@ -199,20 +187,20 @@
 
           <div class="progress-list">
             <div class="progress-row">
-              <div class="progress-top"><div class="name">Resueltos</div><div class="value">...</div></div>
-              <div class="progress"><div class="bar" style="width: 0%"></div></div>
+              <div class="progress-top"><div class="name">Resueltos</div><div class="value">1,43,382</div></div>
+              <div class="progress"><div class="bar" style="width: 92%"></div></div>
             </div>
             <div class="progress-row">
-              <div class="progress-top"><div class="name">En Curso</div><div class="value">...</div></div>
-              <div class="progress"><div class="bar" style="width: 0%"></div></div>
+              <div class="progress-top"><div class="name">En Curso</div><div class="value">87,974</div></div>
+              <div class="progress"><div class="bar" style="width: 58%"></div></div>
             </div>
             <div class="progress-row">
-              <div class="progress-top"><div class="name">Pausados</div><div class="value">...</div></div>
-              <div class="progress"><div class="bar" style="width: 0%"></div></div>
+              <div class="progress-top"><div class="name">Pausados</div><div class="value">45,211</div></div>
+              <div class="progress"><div class="bar" style="width: 36%"></div></div>
             </div>
             <div class="progress-row">
-              <div class="progress-top"><div class="name">Cancelados</div><div class="value">...</div></div>
-              <div class="progress"><div class="bar" style="width: 0%"></div></div>
+              <div class="progress-top"><div class="name">Cancelados</div><div class="value">21,893</div></div>
+              <div class="progress"><div class="bar" style="width: 22%"></div></div>
             </div>
           </div>
         </div>
@@ -230,8 +218,49 @@
           </div>
 
           <div class="list" role="table" aria-label="Lista de usuarios">
-            <!-- Se llenará dinámicamente -->
-            <div style="padding:20px; text-align:center; color:#666;">Cargando usuarios...</div>
+            <div class="list-row" role="row">
+              <div class="list-id" role="cell">18294</div>
+              <div role="cell">
+                <div class="list-name">María González</div>
+                <div class="list-email">mgonzalez@colsof.com.co</div>
+              </div>
+              <div class="status" role="cell"><span class="dot green"></span> Activo</div>
+              <div class="role" role="cell">Empleado</div>
+              <div role="cell"><button class="btn-icon" aria-label="Más opciones">⋯</button></div>
+            </div>
+
+            <div class="list-row" role="row">
+              <div class="list-id" role="cell">9900</div>
+              <div role="cell">
+                <div class="list-name">Juan Pérez</div>
+                <div class="list-email">jperez@colsof.com.co</div>
+              </div>
+              <div class="status" role="cell"><span class="dot green"></span> Activo</div>
+              <div class="role" role="cell">Empleado</div>
+              <div role="cell"><button class="btn-icon" aria-label="Más opciones">⋯</button></div>
+            </div>
+
+            <div class="list-row" role="row">
+              <div class="list-id" role="cell">24994</div>
+              <div role="cell">
+                <div class="list-name">Lucía Ramírez</div>
+                <div class="list-email">lramirez@colsof.co</div>
+              </div>
+              <div class="status" role="cell"><span class="dot yellow"></span> Pendiente</div>
+              <div class="role" role="cell">Pasante</div>
+              <div role="cell"><button class="btn-icon" aria-label="Más opciones">⋯</button></div>
+            </div>
+
+            <div class="list-row" role="row">
+              <div class="list-id" role="cell">19924</div>
+              <div role="cell">
+                <div class="list-name">Carlos Herrera</div>
+                <div class="list-email">cherrera@colsof.com.co</div>
+              </div>
+              <div class="status" role="cell"><span class="dot red"></span> Inactivo</div>
+              <div class="role" role="cell">Empleado</div>
+              <div role="cell"><button class="btn-icon" aria-label="Más opciones">⋯</button></div>
+            </div>
           </div>
         </div>
 
@@ -240,8 +269,46 @@
             <div class="card-title">Usuarios Activos</div>
           </div>
           <div class="mini-list">
-            <!-- Se llenará dinámicamente -->
-            <div style="padding:20px; text-align:center; color:#666;">...</div>
+            <div class="mini-item">
+              <div class="mini-left">
+                <span class="mini-avatar"><img src="https://i.pravatar.cc/36?img=32" alt="Jenny Wilson"></span>
+                <div class="mini-info">
+                  <div class="name">Jenny Wilson</div>
+                  <div class="email">w.lawson@colsof.com.co</div>
+                </div>
+              </div>
+              <div class="mini-right"><div><strong>198</strong></div><div>Casos</div></div>
+            </div>
+            <div class="mini-item">
+              <div class="mini-left">
+                <span class="mini-avatar"><img src="https://i.pravatar.cc/36?img=14" alt="Devon Lane"></span>
+                <div class="mini-info">
+                  <div class="name">Devon Lane</div>
+                  <div class="email">dat.roberts@colsof.com.co</div>
+                </div>
+              </div>
+              <div class="mini-right"><div><strong>201</strong></div><div>Casos</div></div>
+            </div>
+            <div class="mini-item">
+              <div class="mini-left">
+                <span class="mini-avatar"><img src="https://i.pravatar.cc/36?img=47" alt="Jane Cooper"></span>
+                <div class="mini-info">
+                  <div class="name">Jane Cooper</div>
+                  <div class="email">jgraham@colsof.com.co</div>
+                </div>
+              </div>
+              <div class="mini-right"><div><strong>187</strong></div><div>Casos</div></div>
+            </div>
+            <div class="mini-item">
+              <div class="mini-left">
+                <span class="mini-avatar"><img src="https://i.pravatar.cc/36?img=5" alt="Dianne Russell"></span>
+                <div class="mini-info">
+                  <div class="name">Dianne Russell</div>
+                  <div class="email">curtis.dc@colsof.com.co</div>
+                </div>
+              </div>
+              <div class="mini-right"><div><strong>165</strong></div><div>Casos</div></div>
+            </div>
             <div style="text-align:center; margin-top:8px;">
               <a class="card-action-link" href="#">Ver más</a>
             </div>

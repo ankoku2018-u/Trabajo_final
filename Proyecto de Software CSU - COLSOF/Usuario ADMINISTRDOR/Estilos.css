@@ -505,11 +505,3 @@ h1 { font-size: 24px; color: #0b3a66; margin-bottom: 10px; }
   .stats-grid { grid-template-columns: 1fr; }
   .list-row { grid-template-columns: 1fr; gap: 8px; align-items: start; }
 }
-
-/* Botón de acción principal en dashboard */
-.content-tools { display: flex; align-items: center; gap: 16px; margin: 12px 0 14px; }
-.new-case-btn { display: inline-flex; align-items: center; gap: 10px; height: 40px; padding: 0 16px; border-radius: 10px; font-weight: 600; border: 0; background: #1f5bb5; color: #fff; box-shadow: 0 6px 18px rgba(31,91,181,.18); cursor: pointer; text-decoration: none; }
-.new-case-btn:hover { background: #174fa8; transform: translateY(-1px); }
-.new-case-btn svg { width: 18px; height: 18px; }
-
-
