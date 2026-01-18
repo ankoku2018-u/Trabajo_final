@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Herramientas BD CSU</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Herramientas de Base de Datos CSU</h1>
+    <p>Sistema de gestión, respaldo y mantenimiento de PostgreSQL</p>
+  </header>
+
+  <!-- Tabs -->
+  <nav class="tabs">
+    <button data-tab="overview" class="active">Vista General</button>
+    <button data-tab="backups">Backups</button>
+    <button data-tab="tables">Tablas</button>
+    <button data-tab="maintenance">Mantenimiento</button>
+    <button data-tab="queries">Consultas</button>
+  </nav>
+
+  <!-- CONTENIDO -->
+  <main>
+    <!-- Vista General -->
+    <section id="overview" class="tab-content active">
+      <div class="stats">
+        <div class="card">Tamaño: <strong>2.4 GB</strong></div>
+        <div class="card">Registros: <strong>15,847</strong></div>
+        <div class="card">Tablas: <strong>24</strong></div>
+        <div class="card">Integridad: <strong>100%</strong></div>
+      </div>
+
+      <div class="actions">
+        <button onclick="confirmAction('backup-completo')">Backup Completo</button>
+        <button onclick="confirmAction('backup-incremental')">Backup Incremental</button>
+        <button onclick="confirmAction('optimizar')">Optimizar BD</button>
+        <button onclick="confirmAction('verificar')">Verificar Integridad</button>
+      </div>
+    </section>
+
+    <!-- Backups -->
+    <section id="backups" class="tab-content">
+      <h2>Historial de Backups</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Tipo</th>
+            <th>Tamaño</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody id="backupTable"></tbody>
+      </table>
+    </section>
+
+    <!-- Tablas -->
+    <section id="tables" class="tab-content">
+      <h2>Tablas CSU</h2>
+      <div id="tablesContainer"></div>
+    </section>
+
+    <!-- Mantenimiento -->
+    <section id="maintenance" class="tab-content">
+      <h2>Tareas de Mantenimiento</h2>
+      <ul>
+        <li>Optimización de índices</li>
+        <li>Limpieza de logs</li>
+        <li>Verificación de integridad</li>
+      </ul>
+    </section>
+
+    <!-- Consultas -->
+    <section id="queries" class="tab-content">
+      <h2>Consultas Recientes</h2>
+      <div id="queriesContainer"></div>
+    </section>
+  </main>
+
+  <!-- Modal Confirmación -->
+  <div id="confirmModal" class="modal">
+    <div class="modal-content">
+      <p>¿Confirma la acción?</p>
+      <button onclick="executeAction()">Confirmar</button>
+      <button onclick="closeModal()">Cancelar</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
