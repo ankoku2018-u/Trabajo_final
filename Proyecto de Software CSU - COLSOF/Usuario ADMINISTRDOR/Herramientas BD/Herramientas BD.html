@@ -1,93 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <title>Herramientas BD CSU</title>
+  <meta charset="UTF-8">
+  <title>CSU - Estadísticas</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <header>
-    <h1>Herramientas de Base de Datos CSU</h1>
-    <p>Sistema de gestión, respaldo y mantenimiento de PostgreSQL</p>
-  </header>
+<header class="header">
+  <h1>Estadísticas del Sistema</h1>
+  <p>Análisis de desempeño y gestión de casos</p>
+</header>
 
-  <!-- Tabs -->
-  <nav class="tabs">
-    <button data-tab="overview" class="active">Vista General</button>
-    <button data-tab="backups">Backups</button>
-    <button data-tab="tables">Tablas</button>
-    <button data-tab="maintenance">Mantenimiento</button>
-    <button data-tab="queries">Consultas</button>
-  </nav>
+<main class="container">
 
-  <!-- CONTENIDO -->
-  <main>
-    <!-- Vista General -->
-    <section id="overview" class="tab-content active">
-      <div class="stats">
-        <div class="card">Tamaño: <strong>2.4 GB</strong></div>
-        <div class="card">Registros: <strong>15,847</strong></div>
-        <div class="card">Tablas: <strong>24</strong></div>
-        <div class="card">Integridad: <strong>100%</strong></div>
-      </div>
+  <!-- Filtros -->
+  <section class="filters">
+    <select id="periodo">
+      <option value="week">Semana</option>
+      <option value="month" selected>Mes</option>
+      <option value="year">Año</option>
+    </select>
+    <button onclick="exportar()">Exportar</button>
+  </section>
 
-      <div class="actions">
-        <button onclick="confirmAction('backup-completo')">Backup Completo</button>
-        <button onclick="confirmAction('backup-incremental')">Backup Incremental</button>
-        <button onclick="confirmAction('optimizar')">Optimizar BD</button>
-        <button onclick="confirmAction('verificar')">Verificar Integridad</button>
-      </div>
-    </section>
-
-    <!-- Backups -->
-    <section id="backups" class="tab-content">
-      <h2>Historial de Backups</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Fecha</th>
-            <th>Tipo</th>
-            <th>Tamaño</th>
-            <th>Estado</th>
-          </tr>
-        </thead>
-        <tbody id="backupTable"></tbody>
-      </table>
-    </section>
-
-    <!-- Tablas -->
-    <section id="tables" class="tab-content">
-      <h2>Tablas CSU</h2>
-      <div id="tablesContainer"></div>
-    </section>
-
-    <!-- Mantenimiento -->
-    <section id="maintenance" class="tab-content">
-      <h2>Tareas de Mantenimiento</h2>
-      <ul>
-        <li>Optimización de índices</li>
-        <li>Limpieza de logs</li>
-        <li>Verificación de integridad</li>
-      </ul>
-    </section>
-
-    <!-- Consultas -->
-    <section id="queries" class="tab-content">
-      <h2>Consultas Recientes</h2>
-      <div id="queriesContainer"></div>
-    </section>
-  </main>
-
-  <!-- Modal Confirmación -->
-  <div id="confirmModal" class="modal">
-    <div class="modal-content">
-      <p>¿Confirma la acción?</p>
-      <button onclick="executeAction()">Confirmar</button>
-      <button onclick="closeModal()">Cancelar</button>
+  <!-- KPIs -->
+  <section class="kpis">
+    <div class="kpi blue">
+      <span>Total Casos</span>
+      <strong id="totalCases"></strong>
     </div>
-  </div>
+    <div class="kpi green">
+      <span>Resueltos</span>
+      <strong>12,426</strong>
+    </div>
+    <div class="kpi orange">
+      <span>Tiempo Promedio</span>
+      <strong>4.2 hrs</strong>
+    </div>
+    <div class="kpi purple">
+      <span>Satisfacción</span>
+      <strong>4.6 / 5</strong>
+    </div>
+  </section>
 
-  <script src="app.js"></script>
+  <!-- Gráfico -->
+  <section class="chart-box">
+    <h2>Tendencia de Casos</h2>
+    <canvas id="chart" width="600" height="250"></canvas>
+  </section>
+
+  <!-- Tabla -->
+  <section class="table-box">
+    <h2>Casos por Categoría</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Categoría</th>
+          <th>Casos</th>
+          <th>%</th>
+        </tr>
+      </thead>
+      <tbody id="tableData"></tbody>
+    </table>
+  </section>
+
+</main>
+
+<script src="app.js"></script>
 </body>
 </html>

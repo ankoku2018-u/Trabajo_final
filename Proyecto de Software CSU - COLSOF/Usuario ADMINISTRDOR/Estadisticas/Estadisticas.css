@@ -1,0 +1,188 @@
+/* Base y variables alineadas al estilo del menú principal */
+:root {
+  --bg: #f6f7fb;
+  --panel: #ffffff;
+  --border: #e6e9ef;
+  --border-strong: #cdd5e1;
+  --text: #111827;
+  --muted: #6b7280;
+  --primary: #15467b;
+  --primary-2: #0f3f86;
+  --accent: #2563eb;
+  --success: #16a34a;
+  --warning: #f59e0b;
+  --purple: #7c3aed;
+  --shadow: 0 10px 30px rgba(15, 24, 49, 0.08);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.stats-header {
+  background: linear-gradient(180deg, var(--primary-2), var(--primary));
+  color: #fff;
+  padding: 22px 24px;
+  border: 1px solid #0d2f5c;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(17, 63, 126, 0.2);
+  margin-bottom: 16px;
+}
+
+.stats-header h1 { font-size: 26px; margin-bottom: 4px; letter-spacing: -0.3px; }
+.stats-header p { color: rgba(255,255,255,0.9); font-weight: 500; }
+
+.stats-container {
+  max-width: 1400px;
+  margin: 0 auto 32px;
+  padding: 0 4px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Barra de períodos */
+.periods {
+  display: flex;
+  gap: 10px;
+  padding: 16px;
+  margin-bottom: 20px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  align-items: center;
+}
+
+.periods button {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #f8fafc;
+  cursor: pointer;
+  color: var(--text);
+  font-weight: 600;
+  transition: all 0.15s ease;
+}
+
+.periods button:hover { border-color: var(--border-strong); background: #eef2ff; }
+
+.periods .active {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
+}
+
+.periods .export {
+  margin-left: auto;
+  background: var(--success);
+  color: white;
+  border: none;
+  box-shadow: 0 10px 20px rgba(22, 163, 74, 0.2);
+}
+
+/* KPIs */
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.kpi {
+  position: relative;
+  padding: 20px;
+  border-radius: 14px;
+  color: #fff;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.kpi span { opacity: 0.9; font-weight: 600; }
+.kpi strong { font-size: 28px; display: block; margin: 8px 0; }
+.kpi small { opacity: 0.9; font-weight: 600; }
+
+.blue { background: linear-gradient(135deg, #1e3a8a, #2563eb); }
+.green { background: linear-gradient(135deg, #16a34a, #22c55e); }
+.amber { background: linear-gradient(135deg, #d97706, #f59e0b); }
+.purple { background: linear-gradient(135deg, #6d28d9, #8b5cf6); }
+
+.stars { margin-top: 6px; letter-spacing: 1px; }
+
+/* Secciones principales */
+.charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.chart, .box {
+  background: var(--panel);
+  padding: 20px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  min-height: 200px;
+}
+
+.chart h2, .box h2 { margin-bottom: 14px; color: var(--primary); }
+
+.chart svg { width: 100%; height: auto; }
+
+/* Barras */
+.bar {
+  background: #eef2f7;
+  height: 10px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.bar div { height: 10px; border-radius: 6px; }
+
+/* Tabla */
+table { width: 100%; border-collapse: collapse; }
+
+th, td {
+  padding: 12px 10px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+thead th {
+  background: #f8fafc;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+tbody tr:hover { background: #f1f5f9; }
+
+/* Técnicos */
+.technicians {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.tech {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.tech strong { color: var(--primary); display: block; margin-bottom: 6px; }
+.tech p { margin: 2px 0; color: var(--muted); font-weight: 600; }
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .periods { flex-wrap: wrap; gap: 8px; }
+  .periods .export { width: 100%; margin-left: 0; text-align: center; }
+}
