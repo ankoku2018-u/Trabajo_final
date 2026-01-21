@@ -5,9 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Usuarios</title>
     <link rel="stylesheet" href="Estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Inline small reset for SVG icons sizing inside nav */
         .icon { width: 22px; height: 22px; vertical-align: middle; }
+        
+        /* Enhanced form styling */
+        .form-wrapper {
+            background: #fff;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 8px 24px rgba(15, 63, 134, 0.08);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .form-header {
+            text-align: center;
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 2px solid #e6e9ef;
+        }
+        
+        .form-header .form-title {
+            font-size: 1.75rem;
+            color: #0b3a66;
+            margin: 0 0 8px 0;
+            font-weight: 700;
+        }
+        
+        .form-subtitle {
+            color: #6b7280;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+        
+        .input-with-icon {
+            position: relative;
+        }
+        
+        .input-with-icon i {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6b7280;
+            font-size: 16px;
+        }
+        
+        .input-with-icon input,
+        .input-with-icon select {
+            padding-left: 42px;
+        }
+        
+        .gen-pass-btn {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .gen-pass-btn i {
+            font-size: 14px;
+        }
+        
+        .gen-pass-btn:hover::after {
+            content: 'Genera una contraseña segura automáticamente';
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1e293b;
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            white-space: nowrap;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .submit-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 1rem;
+        }
+        
+        .submit-btn i {
+            font-size: 18px;
+        }
+        
+        .checkbox-row {
+            background: #f8fafc;
+            padding: 16px;
+            border-radius: 10px;
+            border: 1px solid #e6e9ef;
+        }
+        
+        .change-pass-label {
+            cursor: pointer;
+            user-select: none;
+        }
+        
+        .change-pass-label input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        
+        .form-section-title {
+            font-size: 1.1rem;
+            color: #0b3a66;
+            font-weight: 600;
+            margin: 24px 0 16px 0;
+            padding-left: 8px;
+            border-left: 4px solid #15467b;
+        }
     </style>
 </head>
 <body>
@@ -25,7 +140,7 @@
 
             <ul class="menu-list">
                 <li class="menu-item">
-                    <a href="#">
+                    <a href="Menu principal Admin.html">
                         <!-- home icon -->
                         <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                             <path d="M3 10.5L12 3l9 7.5V21a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V10.5z" stroke="#0b3a66" stroke-width="1.5" fill="#e8f0fb"/>
@@ -35,7 +150,7 @@
                 </li>
 
                 <li class="menu-item">
-                    <a href="#">
+                    <a href="Estadisticas/Estadisticas.html">
                         <!-- statistics icon -->
                            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                             <rect x="3" y="13" width="6" height="8" rx="1.5" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.5"/>
@@ -48,7 +163,7 @@
                 </li>
 
                 <li class="menu-item">
-                    <a href="#">
+                    <a href="Herramientas BD/Herramientas BD.html">
                         <!-- database icon -->
                         <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                             <ellipse cx="12" cy="6" rx="9" ry="4" fill="#fffde7" stroke="#fbc02d" stroke-width="1.5"/>
@@ -72,10 +187,10 @@
                         </summary>
 
                         <ul class="sub-list">
-                            <li><a href="#">Registrar</a></li>
-                            <li><a href="#">Lista</a></li>
-                            <li><a href="#">Roles</a></li>
-                            <li><a href="#">Monitoreo</a></li>
+                            <li><a href="Creacion de usuarios.html">Registrar</a></li>
+                            <li><a href="Usuarios/Lista/Lista.html">Lista</a></li>
+                            <li><a href="Usuarios/Roles/Roles.html">Roles</a></li>
+                            <li><a href="Usuarios/Monitoreo/Monitoreo.html">Monitoreo</a></li>
                         </ul>
                     </details>
                 </li>
@@ -95,14 +210,14 @@
                         </summary>
 
                         <ul class="sub-list">
-                            <li><a href="#">Mis Casos</a></li>
-                            <li><a href="#">Evidencias</a></li>
+                            <li><a href="Tecnico/Casos/Casos.html">Casos</a></li>
+                            <li><a href="Tecnico/Evidencias/Evidencias.html">Evidencias</a></li>
                         </ul>
                     </details>
                 </li>
 
                 <li class="menu-item">
-                    <a href="#" class="notif">
+                    <a href="Notificaciones/Notificaciones.html" class="notif">
                         <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path d="M12 22a2 2 0 002-2H10a2 2 0 002 2z" stroke="#111" stroke-width="1.2" fill="none"/>
                             <path d="M18 16v-5a6 6 0 10-12 0v5l-2 2h16l-2-2z" stroke="#111" stroke-width="1.2" fill="none"/>
@@ -113,7 +228,7 @@
                 </li>
 
                 <li class="menu-item">
-                    <a href="#">
+                    <a href="Terminal/Terminal.html">
                         <!-- settings/gear icon -->
                         <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                             <circle cx="12" cy="12" r="3" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.5"/>
@@ -146,97 +261,105 @@
                             </div>
                         </div>
                     </div>
-                    <h1 class="form-title">GESTIÓN DE USUARIOS Y ROLES</h1>
-            <form class="user-form">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="nombres">Nombres</label>
-                        <input type="text" id="nombres" name="nombres" placeholder="Nombres" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="apellidos">Apellidos</label>
-                        <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>
-                    </div>
+            
+            <div class="form-wrapper">
+                <div class="form-header">
+                    <h1 class="form-title"><i class="fas fa-users-cog"></i> Gestión de Usuarios y Roles</h1>
+                    <p class="form-subtitle">Complete el formulario para registrar un nuevo usuario en el sistema</p>
                 </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="correo">Correo Electrónico</label>
-                        <input type="email" id="correo" name="correo" placeholder="ejemplo@colsof.com.co" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="rol">Rol</label>
-                        <select id="rol" name="rol" required>
-                            <option value="TECNICO">TECNICO</option>
-                            <option value="GESTOR">GESTOR</option>
-                            <option value="ADMINISTRADOR">ADMINISTRADOR</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-row align-end">
-                    <div class="form-group password-group">
-                        <label for="contrasena">Contraseña</label>
-                        <div class="password-input-wrapper">
-                            <input type="text" id="contrasena" name="contrasena" placeholder="Contraseña" required>
-                            <button type="button" class="gen-pass-btn">Generar Contraseña</button>
+                
+                <form class="user-form">
+                    <div class="form-section-title"><i class="fas fa-user-circle"></i> Información Personal</div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nombres">Nombres</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-user"></i>
+                                <input type="text" id="nombres" name="nombres" placeholder="Ingrese los nombres" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="apellidos">Apellidos</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-user"></i>
+                                <input type="text" id="apellidos" name="apellidos" placeholder="Ingrese los apellidos" required>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="form-row checkbox-row">
-                    <label class="change-pass-label">
-                        <input type="checkbox" name="cambiar_contrasena" value="1">
-                        Cambiar contraseña después de inicio sesión
-                    </label>
-                </div>
-                <div class="form-row">
-                    <button type="submit" class="submit-btn">CREAR USUARIO</button>
-                </div>
-            </form>
+                    
+                    <div class="form-section-title"><i class="fas fa-id-badge"></i> Credenciales y Rol</div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="correo">Correo Electrónico</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" id="correo" name="correo" placeholder="ejemplo@colsof.com.co" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="rol">Rol del Usuario</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-user-tag"></i>
+                                <select id="rol" name="rol" required>
+                                    <option value="">Seleccione un rol</option>
+                                    <option value="TECNICO">Técnico</option>
+                                    <option value="GESTOR">Gestor</option>
+                                    <option value="ADMINISTRADOR">Administrador</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section-title"><i class="fas fa-lock"></i> Seguridad</div>
+                    <div class="form-row align-end">
+                        <div class="form-group password-group">
+                            <label for="contrasena">Contraseña</label>
+                            <div class="password-input-wrapper">
+                                <div class="input-with-icon" style="flex: 1;">
+                                    <i class="fas fa-key"></i>
+                                    <input type="text" id="contrasena" name="contrasena" placeholder="Ingrese o genere una contraseña" required>
+                                </div>
+                                <button type="button" class="gen-pass-btn">
+                                    <i class="fas fa-wand-magic-sparkles"></i>
+                                    Generar Contraseña
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row checkbox-row">
+                        <label class="change-pass-label">
+                            <input type="checkbox" name="cambiar_contrasena" value="1">
+                            <i class="fas fa-shield-alt" style="color: #15467b; margin: 0 4px;"></i>
+                            Solicitar cambio de contraseña en el primer inicio de sesión
+                        </label>
+                    </div>
+                    <div class="form-row">
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-user-plus"></i>
+                            CREAR USUARIO
+                        </button>
+                    </div>
+                </form>
+            </div>
         </main>
     </div>
 
-    <!-- Modal personalizado -->
-<div id="modal-construccion" class="modal-construccion">
-    <div class="modal-content">
-        <h2 class="modal-title">En proceso de construcción</h2>
-        <button id="cerrar-modal" class="modal-btn">Cerrar</button>
-    </div>
-</div>
 <div id="modal-exito" class="modal-construccion">
     <div class="modal-content">
-        <h2 class="modal-title">Usuario creado con éxito</h2>
-           </div>
+        <i class="fas fa-check-circle" style="font-size: 48px; color: #059669; margin-bottom: 12px;"></i>
+        <h2 class="modal-title">¡Usuario creado con éxito!</h2>
+        <p style="color: #6b7280; margin-top: 8px;">El usuario ha sido registrado correctamente en el sistema</p>
+    </div>
 </div>
 <div id="modal-error" class="modal-construccion">
     <div class="modal-content">
-        <h2 class="modal-title">Error</h2>
-        <div>Por favor complete todos los campos requeridos.</div>
-        <button id="cerrar-modal-error" class="modal-btn">Cerrar</button>
+        <i class="fas fa-exclamation-triangle" style="font-size: 48px; color: #ef4444; margin-bottom: 12px;"></i>
+        <h2 class="modal-title">Error en el registro</h2>
+        <p style="color: #6b7280; margin-top: 8px;">Por favor complete todos los campos requeridos correctamente.</p>
+        <button id="cerrar-modal-error" class="modal-btn"><i class="fas fa-times"></i> Cerrar</button>
     </div>
 </div>
 <script>
-// Mostrar modal en vez de alert
-function mostrarModal() {
-  document.getElementById('modal-construccion').style.display = 'flex';
-}
-document.getElementById('cerrar-modal').onclick = function() {
-  document.getElementById('modal-construccion').style.display = 'none';
-};
-// Opciones principales
-const mainMenuLinks = document.querySelectorAll('.menu-list > .menu-item > a:not(.notif)');
-mainMenuLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-        mostrarModal();
-    });
-});
-// Opciones de submenús
-const subMenuLinks = document.querySelectorAll('.sub-list a');
-subMenuLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-        mostrarModal();
-    });
-});
 // Generar contraseña segura
 function generarContrasena(longitud = 12) {
     const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789!@#$%&*?';

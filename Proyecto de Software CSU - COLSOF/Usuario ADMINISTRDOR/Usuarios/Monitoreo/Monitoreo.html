@@ -3,34 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSU - Estadísticas Avanzadas</title>
+  <title>Monitoreo de Usuarios - Admin</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../Estilos.css">
-  <link rel="stylesheet" href="Estadisticas.css">
+  <link rel="stylesheet" href="../../Estilos.css">
+  <link rel="stylesheet" href="Monitoreo.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <div class="container">
-    <!-- Sidebar reutilizada del menú principal -->
+    <!-- Sidebar -->
     <aside class="sidebar">
       <div class="logo-wrap">
-        <img class="logo" src="../LOGO_COLSOF.png" alt="Logo COLSOF" />
+        <img class="logo" src="../../LOGO_COLSOF.png" alt="Logo COLSOF" />
         <div class="brand">COLSOF S.A.S</div>
       </div>
-
       <div class="menu-label">Menu</div>
       <ul class="menu-list">
         <li class="menu-item">
-          <a href="../Menu principal Admin.html">
+          <a href="../../Menu principal Admin.html">
             <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M3 10.5L12 3l9 7.5V21a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V10.5z" stroke="#0b3a66" stroke-width="1.5" fill="#e8f0fb"/>
             </svg>
             <span>Inicio</span>
           </a>
         </li>
-        <li class="menu-item active">
-          <a href="#">
+        <li class="menu-item">
+          <a href="../../Estadisticas/Estadisticas.html">
             <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <rect x="3" y="13" width="6" height="8" rx="1.5" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.5"/>
               <rect x="9" y="3" width="6" height="18" rx="1.5" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.5"/>
@@ -40,7 +40,7 @@
           </a>
         </li>
         <li class="menu-item">
-          <a href="../Herramientas BD/Herramientas BD.html">
+          <a href="../../Herramientas BD/Herramientas BD.html">
             <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <ellipse cx="12" cy="6" rx="9" ry="4" fill="#fffde7" stroke="#fbc02d" stroke-width="1.5"/>
               <path d="M3 6v12c0 2.21 4.03 4 9 4s9-1.79 9-4V6" stroke="#fbc02d" stroke-width="1.5" fill="none"/>
@@ -49,20 +49,19 @@
           </a>
         </li>
         <li class="menu-item">
-          <details>
+          <details open>
             <summary>
               <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <circle cx="12" cy="8" r="4" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.5"/>
                 <path d="M4 20c0-3.31 3.58-6 8-6s8 2.69 8 6" stroke="#1976d2" stroke-width="1.5" fill="none"/>
               </svg>
-              <span>Usuarios</span>
-              <span class="chev">▾</span>
+              <span>Usuarios</span><span class="chev">▾</span>
             </summary>
             <ul class="sub-list">
-              <li><a href="../Creacion de usuarios.html">Registrar</a></li>
-              <li><a href="../Usuarios/Lista/Lista.html">Lista</a></li>
-              <li><a href="../Usuarios/Roles/Roles.html">Roles</a></li>
-              <li><a href="../Usuarios/Monitoreo/Monitoreo.html">Monitoreo</a></li>
+              <li><a href="../../Creacion de usuarios.html">Registrar</a></li>
+              <li><a href="../Lista/Lista.html">Lista</a></li>
+              <li><a href="../Roles/Roles.html">Roles</a></li>
+              <li><a class="active" href="#">Monitoreo</a></li>
             </ul>
           </details>
         </li>
@@ -74,45 +73,43 @@
                 <circle cx="8" cy="12" r="2" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.2"/>
                 <rect x="13" y="10" width="5" height="2" rx="1" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.2"/>
               </svg>
-              <span>Tecnico</span>
-              <span class="chev">▾</span>
+              <span>Tecnico</span><span class="chev">▾</span>
             </summary>
             <ul class="sub-list">
-              <li><a href="../Tecnico/Casos/Casos.html">Casos</a></li>
-              <li><a href="../Tecnico/Evidencias/Evidencias.html">Evidencias</a></li>
+              <li><a href="../../Tecnico/Casos/Casos.html">Casos</a></li>
+              <li><a href="../../Tecnico/Evidencias/Evidencias.html">Evidencias</a></li>
             </ul>
           </details>
         </li>
-        <li class="menu-item notif">
-          <a href="../Notificaciones/Notificaciones.html">
+        <li class="menu-item">
+          <a href="../../Notificaciones/Notificaciones.html">
             <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M12 22a2 2 0 002-2H10a2 2 0 002 2z" stroke="#111" stroke-width="1.2" fill="none"/>
               <path d="M18 16v-5a6 6 0 10-12 0v5l-2 2h16l-2-2z" stroke="#111" stroke-width="1.2" fill="none"/>
             </svg>
-            <span>Notificaciones</span> <span class="badge">10</span></a>
+            <span>Notificaciones</span>
+          </a>
         </li>
-        <li class="menu-item">
-          <a href="../Terminal/Terminal.html">
+        <li class="menu-item notif">
+          <a href="../../Terminal/Terminal.html">
             <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <circle cx="12" cy="12" r="3" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.5"/>
               <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h.09a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h.09a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v.09a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" stroke="#1976d2" stroke-width="1.2" fill="#e3f2fd"/>
             </svg>
-            <span>Terminal</span></a>
+            <span>Terminal</span>
+          </a>
         </li>
       </ul>
-
       <div class="sidebar-bottom"></div>
     </aside>
 
-    <!-- Main content -->
+    <!-- Main -->
     <main class="main-content">
       <div class="top-header">
         <div class="header-left"></div>
         <div class="header-right">
           <div class="profile">
-            <div class="avatar">
-              <img src="../LOGO_COLSOF.png" alt="Avatar" />
-            </div>
+            <div class="avatar"><img src="../../LOGO_COLSOF.png" alt="Avatar" /></div>
             <div class="profile-info">
               <div class="profile-name">AdminColsof</div>
               <div class="profile-email">admincolsof@colsof.com.co</div>
@@ -125,89 +122,89 @@
         </div>
       </div>
 
-      <header class="stats-header">
-        <h1>Estadísticas</h1>
-        <p>Análisis detallado del rendimiento del Centro de Soporte</p>
-      </header>
-
-      <div class="stats-container">
-        <!-- Períodos -->
-        <section class="periods">
-          <button onclick="setPeriod('week')">Última semana</button>
-          <button class="active" onclick="setPeriod('month')">Último mes</button>
-          <button onclick="setPeriod('quarter')">Trimestre</button>
-          <button onclick="setPeriod('year')">Año</button>
-
-          <button class="export">Exportar Reporte</button>
-        </section>
-
-        <!-- KPIs -->
-        <section class="kpis">
-          <div class="kpi blue">
-            <span>Total Casos</span>
-            <strong id="totalCases"></strong>
-            <small>+12.5% vs anterior</small>
+      <div class="monitor-page">
+        <header class="page-header">
+          <div>
+            <p class="page-eyebrow">Usuarios</p>
+            <h1>Monitoreo de Usuarios</h1>
+            <p class="page-desc">Seguimiento en tiempo real de sesiones y actividad</p>
           </div>
-
-          <div class="kpi green">
-            <span>Casos Resueltos</span>
-            <strong>12,426</strong>
-            <small>25.8% del total</small>
+          <div class="page-actions">
+            <select id="timeRange" class="select-control">
+              <option value="1h">Última hora</option>
+              <option value="24h" selected>Últimas 24 horas</option>
+              <option value="7d">Últimos 7 días</option>
+              <option value="30d">Últimos 30 días</option>
+            </select>
+            <button class="btn primary" id="btnRefresh"><i class="fa fa-rotate-right"></i> Actualizar</button>
           </div>
+        </header>
 
-          <div class="kpi amber">
-            <span>Tiempo Promedio</span>
-            <strong>4.2 hrs</strong>
-            <small>-8.3% mejora</small>
+        <section class="monitor-kpis">
+          <div class="kpi-card green">
+            <div class="kpi-label">Usuarios en línea</div>
+            <div class="kpi-value" id="sesiones"></div>
+            <div class="kpi-meta">Conectados actualmente</div>
           </div>
-
-          <div class="kpi purple">
-            <span>Satisfacción</span>
-            <strong>4.6 / 5.0</strong>
-            <div class="stars">★★★★★</div>
+          <div class="kpi-card blue">
+            <div class="kpi-label">Acciones hoy</div>
+            <div class="kpi-value" id="acciones"></div>
+            <div class="kpi-meta">Interacciones registradas</div>
+          </div>
+          <div class="kpi-card purple">
+            <div class="kpi-label">Casos gestionados</div>
+            <div class="kpi-value" id="casos"></div>
+            <div class="kpi-meta">En el rango seleccionado</div>
+          </div>
+          <div class="kpi-card orange">
+            <div class="kpi-label">Tiempo promedio</div>
+            <div class="kpi-value" id="tiempo"></div>
+            <div class="kpi-meta">Sesión por usuario</div>
           </div>
         </section>
 
-        <!-- Gráficos -->
-        <section class="charts">
-          <div class="chart">
-            <h2>Tendencia de Casos</h2>
-            <svg id="trendChart" viewBox="0 0 600 200"></svg>
+        <section class="grid-2">
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Usuarios activos</div>
+                <div class="card-subtitle">Sesiones abiertas y acciones recientes</div>
+              </div>
+            </div>
+            <div id="usuariosActivos" class="user-list"></div>
           </div>
 
-          <div class="chart">
-            <h2>Distribución Tiempo de Resolución</h2>
-            <div id="timeDistribution"></div>
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">Usuarios por ubicación</div>
+              <div class="card-subtitle">Distribución actual</div>
+            </div>
+            <div id="ubicaciones" class="locations"></div>
           </div>
         </section>
 
-        <!-- Categorías -->
-        <section class="box">
-          <h2>Estadísticas por Categoría</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Categoría</th>
-                <th>Total</th>
-                <th>Resueltos</th>
-                <th>%</th>
-                <th>Tiempo</th>
-                <th>Distribución</th>
-              </tr>
-            </thead>
-            <tbody id="categoryTable"></tbody>
-          </table>
-        </section>
+        <section class="grid-2">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">Actividad reciente</div>
+              <div class="card-subtitle">Cronología de eventos</div>
+            </div>
+            <div id="actividad" class="activity-list"></div>
+          </div>
 
-        <!-- Técnicos -->
-        <section class="box">
-          <h2>Rendimiento de Técnicos</h2>
-          <div id="technicians" class="technicians"></div>
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">Línea de tiempo</div>
+              <div class="card-subtitle">Sesiones y acciones clave</div>
+            </div>
+            <ul id="timeline" class="timeline"></ul>
+          </div>
         </section>
       </div>
     </main>
   </div>
 
-  <script src="Estadisticas.js"></script>
+  <script src="../../scripts.js"></script>
+  <script src="Monitoreo.js"></script>
 </body>
 </html>
