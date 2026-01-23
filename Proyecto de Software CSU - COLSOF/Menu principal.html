@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menú principal</title>
+  <link rel="stylesheet" href="Usuario GESTOR/Estilos.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Menú lateral -->
+    <nav class="sidebar">
+      <div class="sidebar-top">
+        <div class="logo-wrap">
+          <img src="LOGO_COLSOF.png" alt="Logo" class="logo" aria-hidden="true" />
+          <h2 class="brand">COLSOF S.A.S</h2>
+        </div>
+        <p class="menu-label">Menu</p>
+      </div>
+
+      <ul class="menu-list">
+        <li class="menu-item">
+          <a href="#" id="link-inicio" class="active">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M3 10.5L12 3l9 7.5V21a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V10.5z" stroke="#0b3a66" stroke-width="1.5" fill="#e8f0fb"/>
+            </svg>
+            <span>Inicio</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="Usuario GESTOR/estadisticas/Menu - Estadisticas.html">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="3" y="13" width="6" height="8" rx="1.5" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.5"/>
+              <rect x="9" y="3" width="6" height="18" rx="1.5" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.5"/>
+              <rect x="15" y="9" width="6" height="12" rx="1.5" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.5"/>
+            </svg>
+            <span>Estadísticas</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="Usuario GESTOR/notificaciones/Menu - Notificaciones.html" class="notif">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 22a2 2 0 002-2H10a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h.09a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h.09a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v.09a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" stroke="#111" stroke-width="1.2" fill="none"/>
+            </svg>
+            <span>Notificaciones</span>
+            <span class="badge hidden" id="notificationBadge">0</span>
+          </a>
+        </li>
+        <li class="menu-item"><a href="Usuario GESTOR/reportes/Menu - Reportes.html">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M3 4h18v4H3zM3 10h18v4H3zM3 16h10v4H3z" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.2"/>
+          </svg>
+          <span>Reportes</span>
+        </a></li>
+        <li class="menu-item"><a href="Usuario GESTOR/herramientas/Menu - Herramientas.html">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="9" stroke="#0b3a66" stroke-width="1.4" fill="#eef4ff"/>
+            <path d="M12 7v5l4 2" stroke="#0b3a66" stroke-width="1.4"/>
+          </svg>
+          <span>Herramientas</span>
+        </a></li>
+        <li class="menu-item group">
+          <details>
+            <summary>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="12" cy="8" r="4" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.5"/>
+                <path d="M4 20c0-3.31 3.58-6 8-6s8 2.69 8 6" stroke="#1976d2" stroke-width="1.5" fill="none"/>
+              </svg>
+              <span>Gestores</span>
+              <span class="chev">▾</span>
+            </summary>
+            <ul class="sub-list">
+              <li><a href="Usuario GESTOR/Centro de costos/Centro de costos.html">Centro de costos</a></li>
+              <li><a href="Usuario GESTOR/Clientes/Clientes.html">Clientes</a></li>
+            </ul>
+          </details>
+        </li>
+        <li class="menu-item group">
+          <details open>
+            <summary>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="3" y="6" width="18" height="12" rx="2" fill="#fffde7" stroke="#fbc02d" stroke-width="1.5"/>
+                <circle cx="8" cy="12" r="2" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.2"/>
+                <rect x="13" y="10" width="5" height="2" rx="1" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.2"/>
+              </svg>
+              <span>Casos</span>
+              <span class="chev">▾</span>
+            </summary>
+            <ul class="sub-list">
+              <li><a href="Usuario GESTOR/Casos/Mis Casos/Mis Casos.html">Mis Casos</a></li>
+              <li><a href="Usuario GESTOR/Casos/Por Cerrar/Por Cerrar.html">Por cerrar</a></li>
+              <li><a href="Usuario GESTOR/Casos/Asignados/Asignados.html">Asignados</a></li>
+              <li><a href="Usuario GESTOR/Casos/Sin Asignar/Sin Asignar.html">Sin Asignar</a></li>
+              <li><a href="Usuario GESTOR/Casos/Borradores/Borradores.html">Borradores</a></li>
+            </ul>
+          </details>
+        </li>
+        <li class="menu-item">
+          <a href="Usuario GESTOR/configuracion/Menu - Configuracion.html">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="3" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.5"/>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09a1.65 1.65 0 0 0 1.51-1z" stroke="#1976d2" stroke-width="1.2" fill="#e3f2fd"/>
+            </svg>
+            <span>Configuración</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="sidebar-bottom"></div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+      <!-- Barra azul superior -->
+      <div class="top-header">
+        <div class="header-left">
+          <!-- Bloque azul de ejemplo del diseño (sin contenido real) -->
+          <div style="height:52px"></div>
+        </div>
+        <div class="header-right">
+          <div class="profile">
+            <div class="avatar"><img src="LOGO_COLSOF.png" alt="avatar" /></div>
+            <div class="profile-info">
+              <div class="profile-name">Juan Pérez</div>
+              <div class="profile-email">JPerez@colsof.com.co</div>
+            </div>
+            <button class="profile-menu-btn" title="Opciones">▾</button>
+            <div class="profile-menu">
+              <button class="logout-btn">Cerrar sesión</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Acciones + Métricas -->
+      <div class="content-tools">
+        <a href="Usuario GESTOR/Creacion de Casos.html" class="new-case-btn" id="btn-nuevo-caso">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+          <span>Nuevo Caso de servicio</span>
+        </a>
+        <div class="metrics-panel">
+          <div class="metric">
+            <small>CREADOS</small>
+            <strong>2,848</strong>
+            <span class="trend down">−14%</span>
+          </div>
+          <div class="metric">
+            <small>EN PAUSA</small>
+            <strong>432</strong>
+            <span class="trend up">+36%</span>
+          </div>
+          <div class="metric">
+            <small>SOLUCIONADOS</small>
+            <strong>1,426</strong>
+            <span class="trend up">+36%</span>
+          </div>
+          <div class="metric">
+            <small>CERRADOS</small>
+            <strong>493</strong>
+            <span class="trend up">+36%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filtros + Búsqueda -->
+      <div class="filters-row">
+        <div class="segmented" role="tablist" aria-label="Vistas">
+          <button class="active" role="tab" aria-selected="true">View all</button>
+          <button role="tab">Monitored</button>
+          <button role="tab">Text</button>
+        </div>
+        <div class="search-wrap" role="search">
+          <span class="search-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#97a0aa" stroke-width="2"/><path d="M20 20l-4-4" stroke="#97a0aa" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+          <input type="search" placeholder="Search" aria-label="Buscar casos" />
+        </div>
+        <button class="filters-btn" title="Filtros" aria-label="Filtros">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M6 12h12M10 19h4" stroke="#374151" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <span>Filters</span>
+        </button>
+      </div>
+
+      <!-- Tabla de casos -->
+      <section class="table-card" aria-label="Listado de casos">
+        <table>
+          <thead>
+            <tr>
+              <th class="td-check"><input type="checkbox" aria-label="Seleccionar todo" id="check-all"></th>
+              <th>ID</th>
+              <th>Apertura</th>
+              <th>Estado</th>
+              <th>Técnico Asignado</th>
+              <th>Prioridad</th>
+              <th>Categoría</th>
+              <th>Cliente</th>
+              <th>Autor</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="cases-table-body">
+            <tr><td colspan="10" class="text-center-padded"><span style="color:#1976d2;">⟳</span> Cargando casos...</td></tr>
+          </tbody>
+        </table>
+        <div class="table-footer">
+          <button class="filters-btn" id="btn-prev">⟵ Previous</button>
+          <div class="pager" id="pager-container">
+            <!-- Los números de página se generan dinámicamente -->
+          </div>
+          <button class="filters-btn" id="btn-next">Next ⟶</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Modal genérico: navegación en construcción -->
+  <div id="modal-construccion" class="modal-construccion" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-content">
+      <h2 id="modal-title" class="modal-title">En proceso de construcción</h2>
+      <button id="cerrar-modal" class="modal-btn">Cerrar</button>
+    </div>
+  </div>
+
+  <script src="Usuario GESTOR/script.js"></script>
+</body>
+</html>
