@@ -1,0 +1,14 @@
+{
+  "name": "csu-project",
+  "version": "1.0.0",
+  "description": "Centro de Servicio Único (CSU) - Sistema de Gestión de Casos",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "postgres": "^3.4.8",
+    "dotenv": "^16.3.1"
+  },
+  "scripts": {
+    "test": "node test_api_cases.js"
+  }
+}
