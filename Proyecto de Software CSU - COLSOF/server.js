@@ -2,12 +2,10 @@ import express from 'express'
 import cors from 'cors'
 import path from 'path'
 import { fileURLToPath } from 'url'
-import bcrypt from 'bcrypt'
 import { pool } from './db/connection.js'
 
 const app = express()
-const PORT = process.env.PORT || 3000
-const isVercel = process.env.VERCEL === '1'
+const PORT = process.env.PORT || 3001
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -24,76 +22,6 @@ app.use(express.json())
 // Health check
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'API running', dbConnected })
-})
-
-// ==================== LOGIN ====================
-
-// Login endpoint
-app.post('/api/login', async (req, res) => {
-  try {
-    const { email, password } = req.body
-
-    // Validar que ambos campos estén presentes
-    if (!email || !password) {
-      return res.status(400).json({
-        success: false,
-        error: 'El correo y la contraseña son requeridos'
-      })
-    }
-
-    // Buscar usuario por email
-    const result = await pool.query(
-      'SELECT id, nombre, apellido, email, password, rol, activo FROM usuarios WHERE email = $1',
-      [email.toLowerCase()]
-    )
-
-    if (result.rows.length === 0) {
-      return res.status(401).json({
-        success: false,
-        error: 'El correo o contraseña son incorrectos'
-      })
-    }
-
-    const usuario = result.rows[0]
-
-    // Verificar si el usuario está activo
-    if (!usuario.activo) {
-      return res.status(401).json({
-        success: false,
-        error: 'La cuenta de usuario está inactiva. Contacta al administrador.'
-      })
-    }
-
-    // Comparar contraseña con la hasheada
-    const passwordMatch = await bcrypt.compare(password, usuario.password)
-
-    if (!passwordMatch) {
-      return res.status(401).json({
-        success: false,
-        error: 'El correo o contraseña son incorrectos'
-      })
-    }
-
-    // Login exitoso - retornar datos del usuario (sin la contraseña)
-    res.json({
-      success: true,
-      message: 'Login exitoso',
-      data: {
-        id: usuario.id,
-        nombre: usuario.nombre,
-        apellido: usuario.apellido,
-        email: usuario.email,
-        rol: usuario.rol
-      }
-    })
-
-  } catch (error) {
-    console.error('Error en /api/login:', error)
-    res.status(500).json({
-      success: false,
-      error: 'Error al procesar la solicitud'
-    })
-  }
 })
 
 // Obtener todos los casos
@@ -467,35 +395,6 @@ if (!isVercel) {
     console.log(`\n🌐 Abre http://localhost:${PORT} en tu navegador`)
   })
 }
-
-// ==================== ARCHIVOS ESTÁTICOS (DESPUÉS DE TODAS LAS RUTAS DE API) ====================
-
-// Servir específicamente los directorios de usuarios
-app.use('/Usuario GESTOR', express.static(path.join(__dirname, 'Usuario GESTOR')))
-app.use('/Usuario ADMINISTRADOR', express.static(path.join(__dirname, 'Usuario ADMINISTRADOR')))
-app.use('/Usuario ADMINISTRDOR', express.static(path.join(__dirname, 'Usuario ADMINISTRDOR')))
-
-// Servir assets y otros recursos
-app.use('/assets', express.static(path.join(__dirname, 'assets')))
-app.use('/shared', express.static(path.join(__dirname, 'shared')))
-
-// Servir archivos estáticos desde la raíz del proyecto (al final para no interferir con las APIs)
-app.use(express.static(__dirname))
-
-// Servir páginas HTML para rutas SPA
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'))
-})
-
-// Manejar rutas dinámicas de Usuario GESTOR
-app.get('/Usuario\\ GESTOR/*', (req, res) => {
-  const filePath = path.join(__dirname, req.path.replace(/\%20/g, ' '))
-  res.sendFile(filePath, (err) => {
-    if (err) {
-      res.status(404).json({ error: 'Archivo no encontrado' })
-    }
-  })
-})
 
 // Exportar app para Vercel (serverless handler)
 export default app

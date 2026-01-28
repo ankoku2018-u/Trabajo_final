@@ -2,10 +2,9 @@
 
 (function(){
   // =====================
-  // Autenticación y Usuario - DESCONECTADO DEL LOGIN
+  // Autenticación y Usuario
   // =====================
   
-  /* CÓDIGO ORIGINAL COMENTADO - REQUIERE LOGIN
   // Verificar si hay un usuario autenticado
   const usuarioData = localStorage.getItem('usuario');
   if (!usuarioData) {
@@ -32,16 +31,6 @@
     window.location.href = resolveLoginPath();
     return;
   }
-  */
-
-  // Usuario simulado para modo standalone
-  const usuario = {
-    id: 1,
-    nombre: 'Admin',
-    apellido: 'COLSOF',
-    email: 'admincolsof@colsof.com.co',
-    rol: 'administrador'
-  };
 
   // Actualizar la información del perfil en la interfaz cuando el DOM esté listo
   document.addEventListener('DOMContentLoaded', function() {
@@ -62,21 +51,9 @@
   function qsa(sel, ctx=document){ return Array.from(ctx.querySelectorAll(sel)); }
 
   // Configuración de API
-  const API_URL = 'http://localhost:3000/api';
+  const API_URL = 'http://localhost:3001/api';
   let refreshInterval = null;
   let currentTimeRange = '12'; // meses por defecto
-
-  // Función para resolver la ruta del login
-  function resolveLoginPath() {
-    const href = window.location.href;
-    const encodedMarker = 'Proyecto%20de%20Software%20CSU%20-%20COLSOF';
-    if (href.includes(encodedMarker)) return href.split(encodedMarker)[0] + `${encodedMarker}/index.html`;
-
-    const plainMarker = 'Proyecto de Software CSU - COLSOF';
-    if (href.includes(plainMarker)) return href.split(plainMarker)[0] + `${plainMarker}/index.html`;
-
-    return '/index.html';
-  }
 
   // Perfil: abrir/cerrar menú y cerrar sesión
   (function(){
@@ -89,16 +66,22 @@
       });
       document.addEventListener('click', () => menu.classList.remove('show'));
     }
+    const resolveLoginPath = () => {
+      const href = window.location.href;
+      const encodedMarker = 'Proyecto%20de%20Software%20CSU%20-%20COLSOF';
+      if (href.includes(encodedMarker)) return href.split(encodedMarker)[0] + `${encodedMarker}/index.html`;
+
+      const plainMarker = 'Proyecto de Software CSU - COLSOF';
+      if (href.includes(plainMarker)) return href.split(plainMarker)[0] + `${plainMarker}/index.html`;
+
+      return '/index.html';
+    };
 
     /* LOGOUT DESCONECTADO - REQUIERE LOGIN
     const loginPath = resolveLoginPath();
     qsa('.logout-btn').forEach(btn => {
       btn.addEventListener('click', () => {
-        // Limpiar el localStorage
-        localStorage.removeItem('usuario');
-        localStorage.removeItem('rememberedEmail');
-        
-        // Redirigir al login
+        alert('Sesión cerrada.');
         window.location.href = loginPath;
       });
     });

@@ -2,44 +2,16 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   // =====================
-  // Resolución de rutas
-  // =====================
-  const resolveLoginPath = () => {
-    const href = window.location.href;
-    const encodedMarker = 'Proyecto%20de%20Software%20CSU%20-%20COLSOF';
-    if (href.includes(encodedMarker)) return href.split(encodedMarker)[0] + `${encodedMarker}/index.html`;
-
-    const plainMarker = 'Proyecto de Software CSU - COLSOF';
-    if (href.includes(plainMarker)) return href.split(plainMarker)[0] + `${plainMarker}/index.html`;
-
-    return '/index.html';
-  };
-
-  // =====================
   // Autenticación y Usuario
   // =====================
   
   // Verificar si hay un usuario autenticado
-  let usuarioData = localStorage.getItem('usuario');
+  const usuarioData = localStorage.getItem('usuario');
   if (!usuarioData) {
-    // En desarrollo, usar un usuario de prueba si no hay autenticación
-    const isDevelopment = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-    if (isDevelopment) {
-      usuarioData = JSON.stringify({
-        id: 1,
-        nombre: 'Juan',
-        apellido: 'Pérez',
-        email: 'juan.perez@colsof.com.co',
-        rol: 'gestor',
-        activo: true
-      });
-      localStorage.setItem('usuario', usuarioData);
-    } else {
-      // Si no hay usuario y no es desarrollo, redirigir al login
-      const loginPath = resolveLoginPath();
-      window.location.href = loginPath;
-      return;
-    }
+    // Si no hay usuario, redirigir al login
+    const loginPath = resolveLoginPath();
+    window.location.href = loginPath;
+    return;
   }
 
   // Parsear datos del usuario
@@ -49,16 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
   } catch (e) {
     console.error('Error al parsear datos del usuario:', e);
     localStorage.removeItem('usuario');
-    const loginPath = resolveLoginPath();
-    window.location.href = loginPath;
+    window.location.href = resolveLoginPath();
     return;
   }
 
   // Verificar que el usuario tenga el rol correcto (Gestor)
   if (usuario.rol && usuario.rol.toLowerCase() !== 'gestor') {
     alert('No tienes permisos para acceder a esta página.');
-    const loginPath = resolveLoginPath();
-    window.location.href = loginPath;
+    window.location.href = resolveLoginPath();
     return;
   }
 
@@ -80,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 
-  const currentUserName = `${usuario.nombre} ${usuario.apellido}`;
+  const currentUserName = document.querySelector('.profile-name')?.textContent?.trim() || 'Gestor asignado';
 
   // Formato de ID de casos (prefijo 030 + padding)
   const formatCaseId = (id) => `030${String(id ?? '').padStart(9, '0')}`;
@@ -110,11 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const loginPath = resolveLoginPath();
   $$('.logout-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      // Limpiar el localStorage
-      localStorage.removeItem('usuario');
-      localStorage.removeItem('rememberedEmail');
-      
-      // Redirigir al login
+      alert('SesiÃ³n cerrada.');
       window.location.href = loginPath;
     });
   });
@@ -155,12 +121,12 @@ document.addEventListener('DOMContentLoaded', () => {
     'Alpina', 'Nutresa', 'Carvajal', 'Compensar', 'Sura', 'Seguros BolÃ­var'
   ];
 
-  // API base (local: http://localhost:3000/api, producción: {origin}/api, file:// -> localhost)
+  // API base (local: http://localhost:3001/api, producciÃ³n: {origin}/api, file:// -> localhost)
   const getApiUrl = () => {
     const host = window.location.hostname;
     const port = window.location.port ? `:${window.location.port}` : '';
     const isLocal = host === 'localhost' || host === '127.0.0.1' || host === '';
-    if (isLocal) return 'http://localhost:3000/api';
+    if (isLocal) return 'http://localhost:3001/api';
     return `${window.location.protocol}//${host}${port}/api`;
   };
 

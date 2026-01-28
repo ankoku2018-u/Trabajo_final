@@ -41,20 +41,8 @@ function validateEmail(email) {
   return re.test(email);
 }
 
-// Show alert with custom message
-function showAlert(message, type = 'error') {
-  const alertContent = alertBox.querySelector('.alert-content');
-  alertContent.innerHTML = `<h2>${type === 'error' ? 'Error' : 'Información'}</h2><p>${message}</p>`;
-  alertBox.classList.add('show');
-}
-
-// Hide alert
-function hideAlert() {
-  alertBox.classList.remove('show');
-}
-
 // Form submission with validation
-form.addEventListener('submit', async (event) => {
+form.addEventListener('submit', (event) => {
   event.preventDefault();
   let hasError = false;
 
@@ -84,8 +72,25 @@ form.addEventListener('submit', async (event) => {
     passwordInput.setAttribute('aria-invalid', 'false');
   }
 
-  if (hasError) {
-    showAlert('Asegúrese de haber ingresado correctamente su información');
+  // Show/hide alert
+  alertBox.classList.toggle('show', hasError);
+
+  if (!hasError) {
+    // Success: Hide alert and prepare for navigation/API call
+    alertBox.classList.remove('show');
+    
+    // Aquí iría la lógica de autenticación real
+    console.log('Login attempt:', {
+      email: emailValue,
+      remember: form.remember.checked
+    });
+    
+    // Simulate successful login - replace with actual API call
+    // window.location.href = 'Usuario GESTOR/Menu principal.html';
+    
+    // For demo, just reset the form
+    form.reset();
+  } else {
     // Focus on first error field for accessibility
     const firstError = form.querySelector('.input-group.error input');
     if (firstError) {
@@ -200,7 +205,7 @@ inputGroups.forEach((group) => {
   input.addEventListener('input', () => {
     group.classList.remove('error');
     input.setAttribute('aria-invalid', 'false');
-    hideAlert();
+    alertBox.classList.remove('show');
   });
 
   // Also remove error on focus for better UX
