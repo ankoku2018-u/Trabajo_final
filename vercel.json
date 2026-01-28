@@ -16,25 +16,25 @@
     }
   },
   
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "Proyecto de Software CSU - COLSOF/api/index.js",
-      "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
-    },
-    {
-      "src": "/Usuario GESTOR/(.*)",
-      "dest": "Proyecto de Software CSU - COLSOF/Usuario GESTOR/$1"
-    },
-    {
-      "src": "/Usuario ADMINISTRDOR/(.*)",
-      "dest": "Proyecto de Software CSU - COLSOF/Usuario ADMINISTRDOR/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "Proyecto de Software CSU - COLSOF/api/index.js"
-    }
-  ],
+ "rewrites": [
+  {
+    "source": "/api/:path*",
+    "destination": "/Proyecto de Software CSU - COLSOF/api/index.js"
+  },
+  {
+    "source": "/Usuario GESTOR/:path*",
+    "destination": "/Proyecto de Software CSU - COLSOF/Usuario GESTOR/:path*"
+  },
+  {
+    "source": "/Usuario ADMINISTRDOR/:path*",
+    "destination": "/Proyecto de Software CSU - COLSOF/Usuario ADMINISTRDOR/:path*"
+  },
+  {
+    "source": "/:path*",
+    "destination": "/Proyecto de Software CSU - COLSOF/api/index.js"
+  }
+]
+
   
   "headers": [
     {
