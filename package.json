@@ -1,0 +1,22 @@
+{
+  "name": "csu-colsof-supabase",
+  "version": "3.0.0",
+  "description": "CSU COLSOF - Frontend con conexión a Supabase",
+  "type": "module",
+  "scripts": {
+    "start": "node Proyecto\\ de\\ Software\\ CSU\\ -\\ COLSOF/server.js",
+    "dev": "node --watch Proyecto\\ de\\ Software\\ CSU\\ -\\ COLSOF/server.js",
+    "build": "echo 'Build step: Express app ready for deployment'",
+    "vercel-build": "npm run build"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "pg": "^8.11.3"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
