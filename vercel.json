@@ -2,38 +2,26 @@
   "version": 2,
   "name": "CSU COLSOF - Gestión de Casos",
   "public": false,
-
   "env": {
-    "NODE_ENV": "production",
-    "VERCEL": "1"
+    "NODE_ENV": "production"
   },
-
   "functions": {
-    "Proyecto de Software CSU - COLSOF/api/index.js": {
+    "api/index.js": {
       "maxDuration": 30,
-      "memory": 1024,
+      "memory": 1024
     }
   },
-
   "rewrites": [
     {
-      "source": "/api/:path*",
-      "destination": "/Proyecto de Software CSU - COLSOF/api/index.js"
+      "source": "/api/(.*)",
+      "destination": "/api/index.js"
     },
     {
-      "source": "/Usuario GESTOR/:path*",
-      "destination": "/Proyecto de Software CSU - COLSOF/Usuario GESTOR/:path*"
-    },
-    {
-      "source": "/Usuario ADMINISTRDOR/:path*",
-      "destination": "/Proyecto de Software CSU - COLSOF/Usuario ADMINISTRDOR/:path*"
-    },
-    {
-      "source": "/:path*",
-      "destination": "/Proyecto de Software CSU - COLSOF/api/index.js"
+      "source": "/(.*)",
+      "destination": "/api/index.js"
     }
   ],
-
+  
   "headers": [
     {
       "source": "/api/(.*)",
