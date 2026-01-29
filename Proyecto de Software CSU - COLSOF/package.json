@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node --watch server.js",
-    "build": "echo \"Sin paso de build: proyecto Express para Vercel\"",
+    "build": "echo 'Build step: Express app ready for deployment'",
     "vercel-build": "npm run build"
   },
   "dependencies": {
