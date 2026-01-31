@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let servicios = [];
     let logs = [];
     let configuraciones = [];
-    const API_BASE = 'http://localhost:3001/api?action=get_casos_simple';
+    const API_BASE = 'http://localhost:3000/api?action=get_casos_simple';
 
     // DOM elements
     const refreshBtn = document.getElementById('refreshBtn');

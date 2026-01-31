@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize with dynamic data from API
     let notificacionesSistema = [];
     let notificacionesUsuarios = [];
-    const API_BASE = 'http://localhost:3001/api?action=get_casos_simple';
+    const API_BASE = 'http://localhost:3000/api?action=get_casos_simple';
 
     // DOM elements
     const systemTab = document.getElementById('systemTab');

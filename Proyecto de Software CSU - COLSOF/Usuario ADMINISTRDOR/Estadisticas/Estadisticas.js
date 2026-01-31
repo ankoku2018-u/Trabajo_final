@@ -15,7 +15,7 @@ const categoryColors = {
 // Fetch data from API
 async function loadStatsFromAPI() {
   try {
-    const response = await fetch('http://localhost:3001/api?action=get_casos_simple');
+    const response = await fetch('http://localhost:3000/api?action=get_casos_simple');
     const data = await response.json();
     allCases = data.cases || [];
     

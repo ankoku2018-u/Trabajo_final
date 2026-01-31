@@ -1,6 +1,6 @@
 let evidencias = [];
 let todasLasEvidencias = [];
-const API_BASE = 'http://localhost:3001/api?action=get_casos_simple';
+const API_BASE = 'http://localhost:3000/api?action=get_casos_simple';
 
 const grid = document.getElementById('gridView');
 const table = document.querySelector('#listView tbody');

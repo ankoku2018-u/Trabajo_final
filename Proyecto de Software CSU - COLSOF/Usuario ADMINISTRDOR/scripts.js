@@ -51,7 +51,7 @@
   function qsa(sel, ctx=document){ return Array.from(ctx.querySelectorAll(sel)); }
 
   // Configuración de API
-  const API_URL = 'http://localhost:3001/api';
+  const API_URL = 'http://localhost:3000/api';
   let refreshInterval = null;
   let currentTimeRange = '12'; // meses por defecto
 

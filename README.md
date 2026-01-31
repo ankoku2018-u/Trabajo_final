@@ -41,7 +41,7 @@ npm run dev           # Desarrollo con nodemon
 ### 3. Acceder al sistema
 - **UI Gestor**: `http://localhost:3000/Usuario%20GESTOR/Menu%20principal.html`
 - **Login**: `http://localhost:3000/Proyecto%20de%20Software%20CSU%20-%20COLSOF/index.html`
-- **API**: `http://localhost:3001/api/casos`
+- **API**: `http://localhost:3000/api/casos`
 
 ---
 

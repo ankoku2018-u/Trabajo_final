@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let casos = [];
     let todosLosCasos = [];
 
-    const API_BASE = 'http://localhost:3001/api?action=get_casos_simple';
+    const API_BASE = 'http://localhost:3000/api?action=get_casos_simple';
 
     // DOM elements
     const table = document.getElementById('casesTable');

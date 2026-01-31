@@ -121,13 +121,11 @@ document.addEventListener('DOMContentLoaded', () => {
     'Alpina', 'Nutresa', 'Carvajal', 'Compensar', 'Sura', 'Seguros BolÃ­var'
   ];
 
-  // API base (local: http://localhost:3001/api, producciÃ³n: {origin}/api, file:// -> localhost)
+  // API base (local: http://localhost:3000/api, producciÃ³n: {origin}/api, file:// -> localhost)
   const getApiUrl = () => {
-    const host = window.location.hostname;
-    const port = window.location.port ? `:${window.location.port}` : '';
-    const isLocal = host === 'localhost' || host === '127.0.0.1' || host === '';
-    if (isLocal) return 'http://localhost:3001/api';
-    return `${window.location.protocol}//${host}${port}/api`;
+    const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+    if (isLocal) return 'http://localhost:3000/api';
+    return '/api';
   };
 
   // =====================
